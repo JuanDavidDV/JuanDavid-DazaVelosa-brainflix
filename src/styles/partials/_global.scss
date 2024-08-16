@@ -1,0 +1,54 @@
+@use './fonts' as *;
+
+//Page Header
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: avenir-next-bold;
+    font-weight: 700;
+
+    @include tablet {
+        font-size: 2.0625rem;
+        line-height: 2.75rem;
+    }
+}
+
+//Section Header
+h2 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-family: avenir-next-bold;
+    font-weight: 700;
+}
+
+//Subheader
+h3 {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-family: avenir-next-bold;
+    font-weight: 700;
+
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+
+//Labels & Buttons
+h4 {
+    font-size: 0.625rem;
+    line-height: 1.25rem;
+    font-family: avenir-next-bold;
+    font-weight: 700;
+
+    @include tablet {
+        font-family: 0.75rem;
+    }
+}
+
+//Body Copy KEEP AN EYE ON EXTEND!
+p {
+    @extend h3;
+    font-family: avenir-next-regular;
+    font-weight: 400;
+}
