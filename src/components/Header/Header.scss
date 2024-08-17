@@ -25,35 +25,48 @@
             }
         }
 
-    &__search-bar {
-        margin-top: $mobile-margin;
-        position: relative;
+        &__box {
+            display: flex;
+            margin-top: $mobile-margin;
+            
+            &__search-bar {
+                position: relative;
 
-        &--icon {
-            position: absolute;
-            margin: auto;
-            bottom: 0;
-            top: 0;
-            left: 0.75rem;
+                &--icon {
+                    position: absolute;
+                    margin: auto;
+                    bottom: 0;
+                    top: 0;
+                    left: 0.75rem;
 
-        }
+                }
 
-        &--field {
-            @include search-bar-field;
+                &--field {
+                    @include search-bar-field;
 
-            &:focus {
-                outline: none;  //Removes default active style
-                border-color: $BrainFlix-Blue;
+                    &:focus {
+                        outline: none;  //Removes default active style
+                        border-color: $BrainFlix-Blue;
+                    }
+
+                    &::placeholder {
+                        color: $BrainFlix-Black;
+                        font-size: 0.8125rem;
+                        line-height: 1.125rem;
+                    }
+                }
             }
 
-            &::placeholder {
-                color: $BrainFlix-Black;
-                font-size: 0.8125rem;
-                line-height: 1.125rem;
+            &__avatar {
+                border-radius: 50%;
+                height: 2.25rem;
+                width: 2.25rem;
+                object-fit: cover;
+                object-position: 20%;
+                flex-shrink: 0;
+                border-color: transparent;
             }
-        }
-    }
-
+        }    
     }
 }
 
