@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use './media-query' as *;
 
 @mixin section-container ($color) {
     width: 100%;
@@ -18,4 +19,66 @@
     padding-left: 2.5rem;
     border: 0.0625rem solid $Mercury;
     background-color: $Alabaster;
+
+    @include tablet {
+        width: 15rem;
+        height: 2.5rem;
+    }
+
+    &:focus {
+        outline: none;  //Removes default active style
+        border-color: $BrainFlix-Blue;
+    }
+
+    &::placeholder {
+        color: $BrainFlix-Black;
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+    }
+}
+
+@mixin avatar {
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    object-fit: cover;
+    object-position: 20%;
+    flex-shrink: 0;
+    border-color: transparent;
+}
+
+@mixin upload-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 1.25rem;
+    left: 0.5rem;
+    margin: auto;
+}
+
+@mixin button {
+    display: flex;
+    margin: $mobile-margin 0;
+    padding: $mobile-padding;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    position: relative;
+    width: 100%;
+    background-color: $BrainFlix-Blue;
+    color: $White;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    border: 0.0625rem solid $BrainFlix-Blue;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $BrainFlix-DarkBlue;
+        border: 0.0625rem solid $BrainFlix-DarkBlue;
+    }
+
+    @include tablet {
+        margin: 0;
+    }
 }
