@@ -3,7 +3,7 @@ import brainFlixLogo from "../../assets/logo/BrainFlix-logo.svg";
 import search from "../../assets/icons/search.svg";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 
-const Header = prop => {
+const Header = () => {
     return (
         <header className="header">
             <div className="header__container">
@@ -16,7 +16,6 @@ const Header = prop => {
                         <input className="header__container__box__search-bar--field" type="text" name="search" placeholder="Search"/>
                     </div>
                     <img className="header__container__box__avatar" src={avatar}/>
-
                 </div>
                 
             </div>
