@@ -1,0 +1,59 @@
+@use '../../styles/partials/fonts' as *;
+@use '../../styles/partials/global' as *;
+@use '../../styles/partials/media-query' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.header {
+    @include section-container ($White);
+
+    &__container {
+        @include section-layout($mobile-padding 0, 0 $mobile-margin);
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+
+        }
+
+        &__logo {
+            height: 1.5625rem;
+            width: 7.5rem;
+
+            &__link {
+                align-self: center;
+            }
+        }
+
+    &__search-bar {
+        margin-top: $mobile-margin;
+        position: relative;
+
+        &--icon {
+            position: absolute;
+            margin: auto;
+            bottom: 0;
+            top: 0;
+            left: 0.75rem;
+
+        }
+
+        &--field {
+            @include search-bar-field;
+
+            &:focus {
+                outline: none;  //Removes default active style
+                border-color: $BrainFlix-Blue;
+            }
+
+            &::placeholder {
+                color: $BrainFlix-Black;
+                font-size: 0.8125rem;
+                line-height: 1.125rem;
+            }
+        }
+    }
+
+    }
+}
+

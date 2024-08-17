@@ -1,4 +1,13 @@
 @use './fonts' as *;
+@use './media-query' as *;
+@use './variables' as *;
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+    font-family: avenir-next-regular;
+}
 
 //Page Header
 h1 {
@@ -51,4 +60,8 @@ p {
     @extend h3;
     font-family: avenir-next-regular;
     font-weight: 400;
+}
+
+textarea {
+    @extend p;
 }

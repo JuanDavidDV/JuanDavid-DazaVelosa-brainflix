@@ -1,0 +1,21 @@
+@use './variables' as *;
+
+@mixin section-container ($color) {
+    width: 100%;
+    background-color: $color;
+}
+
+@mixin section-layout ($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+}
+
+@mixin search-bar-field {
+    height: 2.25rem;
+    width: 15rem;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    padding-left: 2.5rem;
+    border: 0.0625rem solid $Mercury;
+    background-color: $Alabaster;
+}
