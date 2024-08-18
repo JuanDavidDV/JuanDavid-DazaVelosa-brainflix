@@ -15,6 +15,7 @@ h1 {
     line-height: 2rem;
     font-family: avenir-next-bold;
     font-weight: 700;
+    color: $BrainFlix-Black;
 
     @include tablet {
         font-size: 2.0625rem;
@@ -36,6 +37,7 @@ h3 {
     line-height: 1.125rem;
     font-family: avenir-next-bold;
     font-weight: 700;
+    color: $BrainFlix-Black;
 
     @include tablet {
         font-size: 0.875rem;
