@@ -1,3 +1,69 @@
 @use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/global' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/media-query' as *;
 
+.hero-video-details {
+    @include section-main ($White);
+
+    &__container {
+        @include section-layout($mobile-padding 0, 0 $mobile-margin);
+
+        &--title {
+            padding-bottom: $mobile-padding;
+        }
+
+        &__box {
+            display: flex;
+            gap: 1.90rem;
+            border-top: 0.0625rem solid $Mercury;
+            border-bottom: 0.0625rem solid $Mercury;
+            padding: $mobile-padding 0;
+
+            &--one {
+                &--author {
+                    padding-bottom: $mobile-padding;
+                }
+
+                &--date {
+                    color: $Silver;
+                }
+            }
+
+            &--two {
+                &__views-info {
+                    display: flex;
+                    padding-bottom: $mobile-padding;
+                    align-items:start;
+
+                    &--icon {
+                        padding-right: 0.65rem;
+                    }
+
+                    &--numbers {
+                        color: $Silver;
+                    }
+                }
+
+                &__likes-info {
+                    display: flex;
+                    align-items:start;
+
+                    &--icon {
+                        padding-right: 0.65rem;
+                    }
+
+                    &--numbers{
+                        color: $Silver;
+                    }
+                }
+            }
+        }
+
+        &--video-description {
+            padding: $mobile-padding 0;
+        }
+
+    }
+}

@@ -6,8 +6,7 @@ const HeroVideoDetails = (props) => {
     return (
         <section className="hero-video-details">
             <div className="hero-video-details__container">
-                <h1 className="hero-video-details__container--title">{props.heroVideoData.title}</h1>
-                <div className="hero-video-details__container--divider">---</div>
+                <h1 className="hero-video-details__container--title">{props.heroVideoData.title}</h1> 
                 <div className="hero-video-details__container__box">
                     <div className="hero-video-details__container__box--one">
                         <h3 className="hero-video-details__container__box--one--author">By {props.heroVideoData.channel}</h3>
@@ -19,11 +18,10 @@ const HeroVideoDetails = (props) => {
                             <p className="hero-video-details__container__box--two__views-info--numbers">{props.heroVideoData.views}</p>
                         </div>
                         <div className="hero-video-details__container__box--two__likes-info">
-                            <img className="hero-video-details__container__box--two__views-info--icon" src={likesIcon}/>
-                            <p className="hero-video-details__container__box--two__views-info--numbers">{props.heroVideoData.likes}</p>
+                            <img className="hero-video-details__container__box--two__likes-info--icon" src={likesIcon}/>
+                            <p className="hero-video-details__container__box--two__likes-info--numbers">{props.heroVideoData.likes}</p>
                         </div>
                     </div>
-                    <div className="hero-video-details__container--divider">---</div>
                 </div>
                 <p className="hero-video-details__container--video-description">{props.heroVideoData.description}</p>
             </div>

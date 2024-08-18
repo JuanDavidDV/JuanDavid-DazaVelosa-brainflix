@@ -5,7 +5,7 @@
 @use '../../styles/partials/variables' as *;
 
 .header {
-    @include section-container ($White);
+    @include section-main ($White);
 
     &__container {
         @include section-layout($mobile-padding 0, 0 $mobile-margin);

@@ -1,7 +1,7 @@
 @use './variables' as *;
 @use './media-query' as *;
 
-@mixin section-container ($color) {
+@mixin section-main ($color) {
     width: 100%;
     background-color: $color;
 }
