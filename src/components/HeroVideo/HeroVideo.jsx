@@ -1,14 +1,14 @@
-
+import "./HeroVideo.scss";
 
 const HeroVideo = (props) => {
-
-    const { heroVideoData } = props;
-    console.log(heroVideoData.title);
-
     return (
         <section className="hero-video">
             <div className="hero-video__container">
-                <h1>{heroVideoData.title}</h1>
+                <video className="hero-video__container__display"
+                    poster={props.heroVideoData.image}
+                    controls>
+    
+                </video>
             </div>
         </section>
     )

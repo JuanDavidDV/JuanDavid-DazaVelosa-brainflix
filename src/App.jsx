@@ -6,7 +6,7 @@ import HeroVideo from './components/HeroVideo/HeroVideo';
 
 function App() {
   const [heroVideoData, displayVideoData] = useState(VideoData[0]);
-
+  
   return (
     <>
       <Header />
