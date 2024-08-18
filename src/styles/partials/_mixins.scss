@@ -11,6 +11,12 @@
     margin: $margin;
 }
 
+@mixin desktop-layout ($padding){
+    width: $desktop;
+    margin: 0 auto;
+    padding: $padding;  //Padding added to keep section layout, and be consistent on the website when the screen width is > 1789px
+}
+
 @mixin search-bar-field {
     height: 2.25rem;
     width: 100%;
@@ -45,6 +51,11 @@
     object-position: 20%;
     flex-shrink: 0;
     border-color: transparent;
+
+    @include tablet {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
 }
 
 @mixin upload-icon {
@@ -73,12 +84,15 @@
     border: 0.0625rem solid $BrainFlix-Blue;
     cursor: pointer;
 
+    @include tablet {
+        margin: 0;
+        width: 9.375rem;
+        padding: 0 2rem;
+        margin: 0 $tablet-gutters;
+    }
+
     &:hover {
         background-color: $BrainFlix-DarkBlue;
         border: 0.0625rem solid $BrainFlix-DarkBlue;
-    }
-
-    @include tablet {
-        margin: 0;
     }
 }

@@ -15,6 +15,11 @@
         @include tablet {
             @include section-layout($tablet-padding 0, 0 $tablet-margin);
             flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include desktop {
+            @include desktop-layout ($tablet-padding);
         }
 
         &__logo {
@@ -23,58 +28,86 @@
 
             &__link {
                 margin: auto;
-            }
-        }
-
-        &__box {
-            display: flex;
-            gap: 0.75rem;
-            margin-top: $mobile-margin;
-
-            @include tablet {
-                margin-top: 0;
-            }
-            
-            &__search-bar {
-                position: relative;
-                width: 100%;
 
                 @include tablet {
-
-                }
-
-                &--icon {
-                    position: absolute;
-                    margin: auto;
-                    bottom: 0;
-                    top: 0;
-                    left: 0.75rem;
-                }
-
-                &--field {
-                    @include search-bar-field;
-                }
-            }
-
-            &__avatar {
-                @include avatar;
-            }
-        } 
-        
-        &__button {
-            width: 100%;
-
-            &__upload {
-                &--icon {
-                    @include upload-icon;
-                }
-
-                &--button {
-                    @include button;                    
+                    margin: auto 0;
                 }
             }
         }
 
+        &__wrapper {
+            @include tablet {
+                display: flex;
+            }
+
+            &__box {
+                display: flex;
+                gap: 0.75rem;
+                margin-top: $mobile-margin;
+    
+                @include tablet {
+                    margin-top: 0;
+                }
+                
+                &__search-bar {
+                    position: relative;
+                    width: 100%;
+    
+                    @include tablet {
+    
+                    }
+    
+                    &--icon {
+                        position: absolute;
+                        margin: auto;
+                        bottom: 0;
+                        top: 0;
+                        left: 0.75rem;
+                    }
+    
+                    &--field {
+                        @include search-bar-field;
+                    }
+                }
+    
+                &__avatar {
+                    @include avatar;
+    
+                    @include tablet {
+                        display: none;
+                    }
+    
+                    &--tablet {
+                        display: none;
+    
+                        @include tablet {
+                            display: inline-block;
+                            @include avatar;
+                        }
+                    }
+                }
+            } 
+            
+            &__button {
+                width: 100%;
+    
+                @include tablet {
+                    width: auto;
+                    display: flex;
+                }
+    
+                &__upload {
+                    &--icon {
+                        @include upload-icon;
+                    }
+    
+                    &--button {
+                        @include button;                    
+                    }
+                }
+            }
+    
+        }
     }
 }
 
