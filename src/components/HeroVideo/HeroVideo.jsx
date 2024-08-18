@@ -1,10 +1,14 @@
-import VideoData from '../../data/video-details.json';
 
-const HeroVideo = (VideoData) => {
+
+const HeroVideo = (props) => {
+
+    const { heroVideoData } = props;
+    console.log(heroVideoData.title);
+
     return (
         <section className="hero-video">
             <div className="hero-video__container">
-                <h1>Hello {VideoData.title}</h1>
+                <h1>{heroVideoData.title}</h1>
             </div>
         </section>
     )
