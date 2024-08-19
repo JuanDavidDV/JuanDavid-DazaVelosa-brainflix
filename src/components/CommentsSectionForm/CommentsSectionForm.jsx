@@ -12,10 +12,12 @@ const CommentsSectionForm = (props) => {
                     <img className="comment__container__form__box-left__avatar" src={avatar}/>
                 </div>
                 <div className="comment__container__form__wrapper">
-                    <label className="comment__container__form__wrapper__label-comment" htmlFor="inputUserComment">
-                        JOIN THE CONVERSATION
-                    </label>
-                    <textarea className="comment__container__form__wrapper__input-comment" name="inputUserComment" placeholder="Add a new comment"/>
+                    <div className="comment__container__form__wrapper__ui">
+                        <label className="comment__container__form__wrapper__ui__label-comment" htmlFor="inputUserComment">
+                                JOIN THE CONVERSATION
+                            </label>
+                            <textarea className="comment__container__form__wrapper__ui__input-comment" name="inputUserComment" placeholder="Add a new comment"/>
+                    </div>  
                     <button className="comment__container__form__wrapper__button">
                         <img className="comment__container__form__wrapper__button--icon" src={addCommentIcon} alt="comment-icon"/>
                         COMMENT
