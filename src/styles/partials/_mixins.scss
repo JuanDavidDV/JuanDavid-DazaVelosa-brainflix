@@ -6,7 +6,7 @@
     background-color: $color;
 }
 
-@mixin section-layout ($padding, $margin) {
+@mixin tablet-layout ($padding, $margin) {
     padding: $padding;
     margin: $margin;
 }

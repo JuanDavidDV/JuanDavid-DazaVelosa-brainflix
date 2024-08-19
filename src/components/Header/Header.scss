@@ -8,12 +8,12 @@
     @include section-main ($White);
 
     &__container {
-        @include section-layout($mobile-padding 0, 0 $mobile-margin);
+        @include tablet-layout($mobile-padding 0, 0 $mobile-margin);
         display: flex;
         flex-direction: column;
 
         @include tablet {
-            @include section-layout($tablet-padding 0, 0 $tablet-margin);
+            @include tablet-layout($tablet-padding 0, 0 $tablet-margin);
             flex-direction: row;
             justify-content: space-between;
         }

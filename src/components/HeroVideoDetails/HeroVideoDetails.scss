@@ -8,7 +8,11 @@
     @include section-main ($White);
 
     &__container {
-        @include section-layout($mobile-padding 0, 0 $mobile-margin);
+        @include tablet-layout($mobile-padding 0, 0 $mobile-margin);
+
+        @include tablet {
+            @include tablet-layout($tablet-padding 0, 0 $tablet-margin);
+        }
 
         &--title {
             padding-bottom: $mobile-padding;
@@ -21,9 +25,24 @@
             border-bottom: 0.0625rem solid $Mercury;
             padding: $mobile-padding 0;
 
+            @include tablet {
+                justify-content:space-between;
+                border-top: 0;
+                padding: 0 0 0.75rem 0;
+            }
+
             &--one {
+                @include tablet {
+                    display: flex;
+                    gap: 1.5rem;
+                }
+
                 &--author {
                     padding-bottom: $mobile-padding;
+
+                    @include tablet {
+                        padding-bottom: 0;
+                    }
                 }
 
                 &--date {
@@ -32,10 +51,19 @@
             }
 
             &--two {
+                @include tablet {
+                    display: flex;
+                    gap: 1.5rem;
+                }
+
                 &__views-info {
                     display: flex;
                     padding-bottom: $mobile-padding;
-                    align-items:start;
+                    align-items: start;
+
+                    @include tablet{
+                        padding-bottom: 0;
+                    }
 
                     &--icon {
                         padding-right: 0.65rem;
@@ -48,7 +76,7 @@
 
                 &__likes-info {
                     display: flex;
-                    align-items:start;
+                    align-items: start;
 
                     &--icon {
                         padding-right: 0.65rem;
@@ -63,6 +91,10 @@
 
         &--video-description {
             padding: $mobile-padding 0;
+
+             @include tablet {
+                padding: $tablet-padding 0;
+             }
         }
 
     }
