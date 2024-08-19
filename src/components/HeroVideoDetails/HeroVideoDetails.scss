@@ -8,10 +8,10 @@
     @include section-main ($White);
 
     &__container {
-        @include tablet-layout($mobile-padding 0, 0 $mobile-margin);
+        @include display-layout($mobile-padding 0, 0 $mobile-margin);
 
         @include tablet {
-            @include tablet-layout($tablet-padding 0, 0 $tablet-margin);
+            @include display-layout($tablet-padding 0, 0 $tablet-margin);
         }
 
         &--title {
@@ -93,7 +93,7 @@
             padding: $mobile-padding 0 0 0;
 
              @include tablet {
-                padding: $tablet-padding 0;
+                padding: $tablet-padding 0 0 0;
              }
         }
 

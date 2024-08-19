@@ -8,14 +8,14 @@ import CommentsSectionForm from './components/CommentsSectionForm/CommentsSectio
 
 
 function App() {
-  const [heroVideoData, displayVideoData] = useState(VideoData[0]);
+  const [heroVideoData, setHeroVideoData] = useState(VideoData[0]);
   
   return (
     <>
       <Header />
       <HeroVideo heroVideoData = {heroVideoData}/>
       <HeroVideoDetails heroVideoData = {heroVideoData}/> 
-      <CommentsSectionForm heroVideoData = {heroVideoData} />
+      <CommentsSectionForm heroVideoData = {heroVideoData}/>
     </>
   )
 }

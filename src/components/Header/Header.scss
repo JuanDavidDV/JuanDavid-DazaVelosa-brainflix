@@ -8,12 +8,12 @@
     @include section-main ($White);
 
     &__container {
-        @include tablet-layout($mobile-padding 0, 0 $mobile-margin);
+        @include display-layout($mobile-padding 0, 0 $mobile-margin);
         display: flex;
         flex-direction: column;
 
         @include tablet {
-            @include tablet-layout($tablet-padding 0, 0 $tablet-margin);
+            @include display-layout($tablet-padding 0, 0 $tablet-margin);
             flex-direction: row;
             justify-content: space-between;
         }
@@ -58,15 +58,11 @@
                     }
     
                     &--icon {
-                        position: absolute;
-                        margin: auto;
-                        bottom: 0;
-                        top: 0;
-                        left: 0.75rem;
+                        @include icon-in-button;
                     }
     
                     &--field {
-                        @include search-bar-field;
+                        @include input-area;
                     }
                 }
     
