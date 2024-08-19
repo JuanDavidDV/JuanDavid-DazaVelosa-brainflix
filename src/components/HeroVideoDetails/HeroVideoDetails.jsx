@@ -26,8 +26,8 @@ const HeroVideoDetails = (props) => {
                 <p className="hero-video-details__container--video-description">{props.heroVideoData.description}</p>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default HeroVideoDetails;
 

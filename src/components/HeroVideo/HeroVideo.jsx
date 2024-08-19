@@ -11,7 +11,7 @@ const HeroVideo = (props) => {
                 </video>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default HeroVideo;

@@ -8,7 +8,6 @@
 
     &__container {
         @include display-layout(0 0 $mobile-padding 0, 0 $mobile-margin);
-        border-bottom: 0.0625rem solid $Mercury;
 
         @include tablet {
             @include display-layout(0 0 $tablet-padding 0, 0 $tablet-margin)
@@ -22,12 +21,9 @@
             display: flex;
             gap: 1rem;
         
-            &__box-left {
-
-                &__avatar {
-                    @include avatar;
-                    margin-top: 1.5rem;
-                }
+            &__avatar {
+                @include avatar;
+                margin-top: 1.5rem;
             }
 
             &__wrapper {
