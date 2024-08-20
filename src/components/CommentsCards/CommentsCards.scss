@@ -1,12 +1,19 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/global' as *;
+@use '../../styles/partials/media-query' as *;
 
 .comments-cards__container{
     display: flex;
     gap: 1rem;
     border-top: 0.0625rem solid $Mercury;
     padding-top: $mobile-padding;
+    margin-right: $mobile-margin;
+
+    @include tablet {
+        padding-top: $tablet-padding;
+        margin-right: 0;
+    }
 
     &__avatar {
         @include avatar;   
@@ -15,7 +22,7 @@
 
     &__user-info {
         width: 100%;
-        
+
         &__details {
             display: flex;
             justify-content: space-between;
@@ -27,6 +34,10 @@
         }
         &--comment {
             padding-bottom: $mobile-padding;
+
+            @include tablet {
+                padding-bottom: $tablet-padding;
+            }
         }
     }
 }

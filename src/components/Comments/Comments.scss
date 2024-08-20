@@ -1,11 +1,17 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/media-query' as *;
 
 .comments {
     @include section-main ($White);
 
     &__container {
-        @include display-layout ($mobile-padding 0, 0 $mobile-margin);
+        margin: $mobile-margin 0 0 $mobile-margin;
+        border-bottom: 0.0625rem solid $Mercury;
+
+        @include tablet {
+            margin: 0 $tablet-margin;
+        }
 
         &__content {
             list-style-type: none;
