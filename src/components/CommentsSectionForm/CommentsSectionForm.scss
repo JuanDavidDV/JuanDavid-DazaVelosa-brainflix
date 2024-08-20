@@ -7,7 +7,7 @@
     @include section-main($White);
 
     &__container {
-        @include display-layout(0 0 $mobile-padding 0, 0 $mobile-margin);
+        @include display-layout(0, 0 $mobile-margin);
 
         @include tablet {
             @include display-layout(0 0 $tablet-padding 0, 0 $tablet-margin)

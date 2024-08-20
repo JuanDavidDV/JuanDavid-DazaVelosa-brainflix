@@ -1,0 +1,16 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.comments {
+    @include section-main ($White);
+
+    &__container {
+        @include display-layout ($mobile-padding 0, 0 $mobile-margin);
+
+        &__content {
+            list-style-type: none;
+        }
+    }
+
+
+}

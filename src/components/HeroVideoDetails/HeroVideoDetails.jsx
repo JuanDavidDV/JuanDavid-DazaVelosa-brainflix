@@ -33,7 +33,7 @@ export default HeroVideoDetails;
 
 
 //Function creates a dynamic timestamp
-const timeAgo = (timeStampAgo) => {
+export const timeAgo = (timeStampAgo) => {
     let actualDate = new Date();
     let secondsAgo = (actualDate.getTime() - timeStampAgo) / 1000;
         if (secondsAgo < 30) {

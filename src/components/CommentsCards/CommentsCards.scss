@@ -1,15 +1,30 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
 
-.comments-card {
-    @include section-main ($White);
+.comments-cards__container{
+    display: flex;
+    gap: 1rem;
+    border-top: 0.0625rem solid $Mercury;
+    padding-top: $mobile-padding;
 
-    &__container {
-        @include display-layout ($mobile-padding 0, 0 $mobile-margin);
+    &__avatar {
+        @include avatar;   
+        background-color: $Mercury;
     }
-}
 
-.comments-cards__avatar {
-    @include avatar;   
-    background-color: $Mercury;
+    &__user-info {
+        &__details {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 0.6rem;
+
+            &--timestamp {
+                color: $Silver;
+            }
+        }
+        &--comment {
+            padding-bottom: $mobile-padding;
+        }
+    }
 }

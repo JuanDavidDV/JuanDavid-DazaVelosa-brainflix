@@ -1,4 +1,6 @@
 import CommentsCards from "../CommentsCards/CommentsCards"
+import './Comments.scss';
+import { timeAgo } from "../HeroVideoDetails/HeroVideoDetails";
 
 const Comments = (props) => {
 
@@ -9,12 +11,10 @@ const Comments = (props) => {
                     {props.heroVideoData.map((comment) => (
                         <li className="comments__container__content__list" key={comment.id}>
                             <CommentsCards 
-                                avatar={comment.avatar}
-                            />
-
                                 name={comment.name}
-                                
-                            
+                                timestamp={comment.timestamp}
+                                comment={comment.comment}
+                            />
                         </li>
                     ))}
                 </ul>
