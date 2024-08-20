@@ -6,9 +6,14 @@ import HeroVideo from './components/HeroVideo/HeroVideo';
 import HeroVideoDetails from './components/HeroVideoDetails/HeroVideoDetails';
 import CommentsSectionForm from './components/CommentsSectionForm/CommentsSectionForm';
 import Comments from './components/Comments/Comments';
+import NextVideos from './components/NextVideos/NextVideos';
 
 function App() {
   const [heroVideoData, setHeroVideoData] = useState(VideoData[0]);
+
+  const otherVideos = VideoData.filter((video) => video.id !== heroVideoData.id)
+
+  console.log(otherVideos)
   
 return (
     <>
@@ -30,6 +35,7 @@ return (
       <Comments 
           heroComments = {heroVideoData.comments} 
       />
+      <NextVideos videos={otherVideos}/>
     </>
   );
 };
