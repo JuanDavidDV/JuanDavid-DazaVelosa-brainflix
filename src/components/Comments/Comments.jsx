@@ -1,3 +1,5 @@
+import CommentsCards from "../CommentsCards/CommentsCards"
+
 const Comments = (props) => {
 
     return (
@@ -6,7 +8,10 @@ const Comments = (props) => {
                 <ul className="comments__container__content">
                     {props.heroVideoData.map((comment) => (
                         <li className="comments__container__content__list" key={comment.id}>
-                            
+                            <CommentsCards 
+                                avatar={comment.avatar}
+                            />
+
                                 name={comment.name}
                                 
                             
