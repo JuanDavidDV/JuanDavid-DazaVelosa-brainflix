@@ -15,7 +15,7 @@ const CommentsCards = ({ name, timestamp, comment }) => {
                 </div>
             </div>
         </article>
-    )
-}
+    );
+};
 
 export default CommentsCards;

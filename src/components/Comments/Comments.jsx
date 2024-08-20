@@ -19,7 +19,7 @@ const Comments = ({ heroComments }) => {
                 </ul>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default Comments;

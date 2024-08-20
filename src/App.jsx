@@ -11,27 +11,27 @@ function App() {
   const [heroVideoData, setHeroVideoData] = useState(VideoData[0]);
   
 return (
-<>
-    <Header />
-    <HeroVideo 
-        heroImage = {heroVideoData.image}
-    />
-    <HeroVideoDetails 
-        heroTitle = {heroVideoData.title}
-        heroChannel = {heroVideoData.channel}
-        heroTimestamp = {heroVideoData.timestamp}
-        heroViews = {heroVideoData.views}
-        heroLikes = {heroVideoData.likes}
-        heroDescription = {heroVideoData.description}
-    />
-    <CommentsSectionForm 
-        heroCommentsNumber = {heroVideoData.comments}
-    />
-    <Comments 
-        heroComments = {heroVideoData.comments} 
+    <>
+      <Header />
+      <HeroVideo 
+          heroImage = {heroVideoData.image}
       />
-</>
-)
-}
+      <HeroVideoDetails 
+          heroTitle = {heroVideoData.title}
+          heroChannel = {heroVideoData.channel}
+          heroTimestamp = {heroVideoData.timestamp}
+          heroViews = {heroVideoData.views}
+          heroLikes = {heroVideoData.likes}
+          heroDescription = {heroVideoData.description}
+      />
+      <CommentsSectionForm 
+          heroCommentsNumber = {heroVideoData.comments}
+      />
+      <Comments 
+          heroComments = {heroVideoData.comments} 
+      />
+    </>
+  );
+};
 
 export default App
