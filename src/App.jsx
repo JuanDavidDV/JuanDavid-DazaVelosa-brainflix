@@ -12,9 +12,7 @@ function App() {
   const [heroVideoData, setHeroVideoData] = useState(VideoData[0]);
 
   const otherVideos = VideoData.filter((video) => video.id !== heroVideoData.id)
-
-  console.log(otherVideos)
-  
+ 
 return (
     <>
       <Header />

@@ -2,7 +2,7 @@ import "./HeroVideoDetails.scss"
 import viewsIcon from "../../assets/icons/views.svg"
 import likesIcon from "../../assets/icons/likes.svg"
 
-const HeroVideoDetails = ( {heroTitle, heroChannel, heroTimestamp, heroViews, heroLikes, heroDescription} ) => {
+const HeroVideoDetails = ({ heroTitle, heroChannel, heroTimestamp, heroViews, heroLikes, heroDescription }) => {
 
     return (
         <section className="hero-video-details">

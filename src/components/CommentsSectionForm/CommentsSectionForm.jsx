@@ -2,7 +2,7 @@ import "./CommentsSectionForm.scss";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import addCommentIcon from "../../assets/icons/add_comment.svg";
 
-const CommentsSectionForm = ( {heroCommentsNumber} ) => {
+const CommentsSectionForm = ({ heroCommentsNumber }) => {
     return (
         <section className="comment-input">
             <div className="comment-input__container">

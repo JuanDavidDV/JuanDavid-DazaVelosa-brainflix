@@ -1,0 +1,10 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.next-videos-cards__container {
+    &__image {
+        width: 10rem;
+        border-radius: 0.25rem;
+        background-color: $Mercury;
+    }
+}

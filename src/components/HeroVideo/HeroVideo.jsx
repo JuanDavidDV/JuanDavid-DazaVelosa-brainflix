@@ -1,6 +1,6 @@
 import "./HeroVideo.scss";
 
-const HeroVideo = ( {heroImage} ) => {
+const HeroVideo = ({ heroImage }) => {
 
     return (
         <section className="hero-video">
