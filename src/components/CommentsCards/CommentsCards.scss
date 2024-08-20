@@ -1,6 +1,13 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 
+.comments-card {
+    @include section-main ($White);
+
+    &__container {
+        @include display-layout ($mobile-padding 0, 0 $mobile-margin);
+    }
+}
 
 .comments-cards__avatar {
     @include avatar;   

@@ -3,7 +3,7 @@
 @use '../../styles/partials/global' as *;
 @use '../../styles/partials/media-query' as *;
 
-.comment {
+.comment-input {
     @include section-main($White);
 
     &__container {
