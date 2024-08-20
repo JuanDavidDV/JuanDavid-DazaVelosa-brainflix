@@ -2,11 +2,11 @@ import "./CommentsSectionForm.scss";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import addCommentIcon from "../../assets/icons/add_comment.svg";
 
-const CommentsSectionForm = (props) => {
+const CommentsSectionForm = ( {heroCommentsNumber} ) => {
     return (
         <section className="comment-input">
             <div className="comment-input__container">
-                <h3 className="comment-input__container--total-comments">{props.heroVideoData.comments.length} Comments</h3>
+                <h3 className="comment-input__container--total-comments">{heroCommentsNumber.length} Comments</h3>
             <form className="comment-input__container__form">
                 <img className="comment-input__container__form__avatar" src={avatar}/>
                 <div className="comment-input__container__form__wrapper">

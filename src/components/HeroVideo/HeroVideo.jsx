@@ -1,11 +1,12 @@
 import "./HeroVideo.scss";
 
-const HeroVideo = (props) => {
+const HeroVideo = ( {heroImage} ) => {
+
     return (
         <section className="hero-video">
             <div className="hero-video__container">
                 <video className="hero-video__container__display"
-                    poster={props.heroVideoData.image}
+                    poster={heroImage}
                     controls>
     
                 </video>

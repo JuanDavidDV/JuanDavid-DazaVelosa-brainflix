@@ -10,16 +10,28 @@ import Comments from './components/Comments/Comments';
 function App() {
   const [heroVideoData, setHeroVideoData] = useState(VideoData[0]);
   
-  return (
-    <>
-      <Header />
-      <HeroVideo heroVideoData = {heroVideoData}/>
-      <HeroVideoDetails heroVideoData = {heroVideoData}/> 
-      <CommentsSectionForm heroVideoData = {heroVideoData}/>
-      <Comments heroVideoData = {heroVideoData.comments} />
-      hello
-    </>
-  )
+return (
+<>
+    <Header />
+    <HeroVideo 
+        heroImage = {heroVideoData.image}
+    />
+    <HeroVideoDetails 
+        heroTitle = {heroVideoData.title}
+        heroChannel = {heroVideoData.channel}
+        heroTimestamp = {heroVideoData.timestamp}
+        heroViews = {heroVideoData.views}
+        heroLikes = {heroVideoData.likes}
+        heroDescription = {heroVideoData.description}
+    />
+    <CommentsSectionForm 
+        heroCommentsNumber = {heroVideoData.comments}
+    />
+    <Comments 
+        heroComments = {heroVideoData.comments} 
+      />
+</>
+)
 }
 
 export default App
