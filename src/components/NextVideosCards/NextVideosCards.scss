@@ -22,6 +22,15 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 25%;
+
+        @include tablet {
+            width: 25%;
+        }
+
+        &--title {
+            @include tablet {
+                line-height: 1.15rem;
+            }
+        }
     }
 }
