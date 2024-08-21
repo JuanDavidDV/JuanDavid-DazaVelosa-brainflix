@@ -8,7 +8,7 @@
     margin: $mobile-margin 0;
 
     @include tablet {
-
+        margin: $tablet-padding 0;
     }
 
     &__image {
@@ -22,5 +22,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 25%;
     }
 }
