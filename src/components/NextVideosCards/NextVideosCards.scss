@@ -1,10 +1,26 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/media-query' as *;
 
 .next-videos-cards__container {
+    display: flex;
+    gap: 1rem;
+    margin: $mobile-margin 0;
+
+    @include tablet {
+
+    }
+
     &__image {
-        width: 10rem;
+        width: 6.37rem;
+        height: 4rem;
         border-radius: 0.25rem;
         background-color: $Mercury;
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }

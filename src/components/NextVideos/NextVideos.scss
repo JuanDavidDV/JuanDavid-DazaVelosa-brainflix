@@ -1,0 +1,25 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/media-query' as *;
+
+.next-videos {
+    @include section-main ($White);
+
+    &__container {
+        @include display-layout ($mobile-padding 0, 0 $mobile-margin);
+
+        @include tablet {
+            @include display-layout ($tablet-padding 0, 0 $tablet-margin); 
+        }
+        
+        &__section-title {
+            color: $Silver;
+            font-size: 0.8125rem;
+            font-weight: 700;
+        }
+
+        &__content {
+            list-style-type: none;
+        }
+    }
+}
