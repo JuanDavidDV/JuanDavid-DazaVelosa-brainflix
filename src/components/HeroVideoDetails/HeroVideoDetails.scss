@@ -14,8 +14,17 @@
             @include display-layout($tablet-padding 0, 0 $tablet-margin);
         }
 
+        @include desktop {
+            padding: 0;
+            margin: 0;
+        }
+
         &--title {
             padding-bottom: $mobile-padding;
+            
+            @include tablet {
+                padding-top: 0.75rem;
+            }
         }
 
         &__box {

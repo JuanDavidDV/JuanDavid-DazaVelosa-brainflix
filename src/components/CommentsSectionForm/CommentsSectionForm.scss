@@ -12,6 +12,11 @@
         @include tablet {
             @include display-layout(0 0 $tablet-padding 0, 0 $tablet-margin)
         }
+        
+        @include desktop {
+            padding: $tablet-padding 0;
+            margin: 0;
+        }
     
         &--total-comments {
             padding-bottom: $mobile-padding;

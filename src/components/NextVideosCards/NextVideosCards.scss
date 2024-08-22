@@ -27,6 +27,10 @@
             width: 25%;
         }
 
+        @include desktop {
+            width: 48%;
+        }
+
         &--title {
             @include tablet {
                 line-height: 1.15rem;

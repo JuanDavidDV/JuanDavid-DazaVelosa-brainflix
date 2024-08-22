@@ -6,6 +6,7 @@
 
 .header {
     @include section-main ($White);
+    
 
     &__container {
         @include display-layout($mobile-padding 0, 0 $mobile-margin);
@@ -13,13 +14,15 @@
         flex-direction: column;
 
         @include tablet {
-            @include display-layout($tablet-padding 0, 0 $tablet-margin);
+            @include display-layout($tablet-padding, 0 $tablet-margin);
             flex-direction: row;
             justify-content: space-between;
+            margin: auto;
         }
 
         @include desktop {
             @include desktop-layout ($tablet-padding);
+            justify-content: stretch;
         }
 
         &__logo {
@@ -31,6 +34,10 @@
 
                 @include tablet {
                     margin: auto 0;
+                }
+
+                @include desktop {
+                    margin-right: 35rem;
                 }
             }
         }

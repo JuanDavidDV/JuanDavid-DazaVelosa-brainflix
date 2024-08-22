@@ -1,0 +1,17 @@
+@use './styles/partials/media-query' as *;
+@use './styles/partials/variables' as *;
+@use './styles/partials/mixins' as *;
+
+.video-page__lower-section {
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        @include desktop-layout ($tablet-padding);
+    }
+
+    &--video-details {
+        @include desktop {
+            width: 57%;
+        }
+    }
+}

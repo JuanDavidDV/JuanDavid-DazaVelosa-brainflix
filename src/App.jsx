@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import VideoData from './data/video-details.json';
-import './App.css';
+import './App.scss';
 import Header from './components/Header/Header';
 import HeroVideo from './components/HeroVideo/HeroVideo'; 
 import HeroVideoDetails from './components/HeroVideoDetails/HeroVideoDetails';
@@ -14,27 +14,33 @@ function App() {
   const otherVideos = VideoData.filter((video) => video.id !== heroVideoData.id)
  
 return (
-    <>
+    <main className="video-page">
       <Header />
       <HeroVideo 
-          heroImage = {heroVideoData.image}
+         heroImage = {heroVideoData.image}
       />
-      <HeroVideoDetails 
-          heroTitle = {heroVideoData.title}
-          heroChannel = {heroVideoData.channel}
-          heroTimestamp = {heroVideoData.timestamp}
-          heroViews = {heroVideoData.views}
-          heroLikes = {heroVideoData.likes}
-          heroDescription = {heroVideoData.description}
-      />
-      <CommentsSectionForm 
-          heroCommentsNumber = {heroVideoData.comments}
-      />
-      <Comments 
-          heroComments = {heroVideoData.comments} 
-      />
-      <NextVideos videos={otherVideos}/>
-    </>
+      <section className="video-page__lower-section">
+        <div className="video-page__lower-section--video-details">
+          <HeroVideoDetails 
+              heroTitle = {heroVideoData.title}
+              heroChannel = {heroVideoData.channel}
+              heroTimestamp = {heroVideoData.timestamp}
+              heroViews = {heroVideoData.views}
+              heroLikes = {heroVideoData.likes}
+              heroDescription = {heroVideoData.description}
+          />
+          <CommentsSectionForm 
+              heroCommentsNumber = {heroVideoData.comments}
+          />
+          <Comments 
+              heroComments = {heroVideoData.comments} 
+          />
+        </div>
+        <div className="video-page__lower-section--next-videos">
+          <NextVideos videos={otherVideos}/>
+        </div>
+      </section>
+    </main>
   );
 };
 

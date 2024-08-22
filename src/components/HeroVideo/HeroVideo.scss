@@ -4,8 +4,9 @@
 @use '../../styles/partials/media-query' as *;
 
 .hero-video {
-    width: 100%;
-    background-color: $BrainFlix-DarkBlack;
+
+    @include section-main ($BrainFlix-DarkBlack);
+
     &__container {
 
         @include tablet {
@@ -20,11 +21,11 @@
             max-width: 100%;
             margin: auto;
             display: block; //Removes extra spacing at the button when desktop leayout applied
-        
+            aspect-ratio: 16/9;
+
             @include tablet {
                 max-width: 69.5rem;
                 width: 100%;
-                aspect-ratio: 16/9;
             }
         }
     }
