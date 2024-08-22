@@ -16,7 +16,7 @@
         }
         
         @include desktop {
-            padding: $tablet-padding 0;
+            padding: $desktop-gutters $desktop-gutters $desktop-gutters 0;
         }
     
         &--total-comments {

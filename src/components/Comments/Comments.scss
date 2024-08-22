@@ -13,11 +13,13 @@
             @include display-layout(0 $tablet-padding, 0 $tablet-margin);
             margin: auto;
             max-width: 67rem;
+            border-bottom: 0;
         }
 
         @include desktop {
             border: 0;
             margin: 0;
+            padding: 0;
         }
 
         &__content {
@@ -25,5 +27,13 @@
         }
     }
 
+    &__divider__bottom--tablet {
+        @include tablet {
+            border-bottom: 0.0625rem solid $Mercury;
+        }
 
+        @include desktop {
+            border: 0;
+        }
+    }
 }

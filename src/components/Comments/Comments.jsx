@@ -17,6 +17,7 @@ const Comments = ({ heroComments }) => {
                         </li>
                     ))}
                 </ul>
+                <div className="comments__divider__bottom--tablet"></div>
             </div>
         </section>
     );

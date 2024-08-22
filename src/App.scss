@@ -6,14 +6,15 @@
     @include desktop {
         display: flex;
         justify-content: space-between;
-        @include desktop-layout ($tablet-padding);
+        @include desktop-layout (0 0 0 $tablet-padding);
         max-width: 67rem;
         padding-top: 0;
+        height: 100%;
     }
 
     &--video-details {
         @include desktop {
-            width: 87%;
+            width: 93%;
             padding: 2.25rem 0 0 0;
         }
     }
@@ -21,7 +22,7 @@
     &--next-videos {
         @include desktop {
             width: auto;
-            padding: 2.25rem 0 0 $tablet-gutters;
+            padding: 2.25rem 0 7rem $tablet-gutters;
             border-left: 0.0625rem solid $Mercury;
         }
     }

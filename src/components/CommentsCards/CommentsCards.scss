@@ -23,6 +23,10 @@
     &__user-info {
         width: 100%;
 
+        @include desktop {
+            padding-right: $desktop-gutters;
+        }
+
         &__details {
             display: flex;
             justify-content: space-between;
