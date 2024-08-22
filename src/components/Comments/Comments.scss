@@ -10,7 +10,9 @@
         border-bottom: 0.0625rem solid $Mercury;
 
         @include tablet {
-            margin: 0 $tablet-margin;
+            @include display-layout(0 $tablet-padding, 0 $tablet-margin);
+            margin: auto;
+            max-width: 67rem;
         }
 
         @include desktop {

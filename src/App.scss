@@ -7,11 +7,22 @@
         display: flex;
         justify-content: space-between;
         @include desktop-layout ($tablet-padding);
+        max-width: 67rem;
+        padding-top: 0;
     }
 
     &--video-details {
         @include desktop {
-            width: 57%;
+            width: 87%;
+            padding: 2.25rem 0 0 0;
+        }
+    }
+
+    &--next-videos {
+        @include desktop {
+            width: auto;
+            padding: 2.25rem 0 0 $tablet-gutters;
+            border-left: 0.0625rem solid $Mercury;
         }
     }
 }

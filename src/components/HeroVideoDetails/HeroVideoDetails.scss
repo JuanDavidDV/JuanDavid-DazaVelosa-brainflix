@@ -11,7 +11,9 @@
         @include display-layout($mobile-padding 0, 0 $mobile-margin);
 
         @include tablet {
-            @include display-layout($tablet-padding 0, 0 $tablet-margin);
+            @include display-layout($tablet-padding, 0 $tablet-margin);
+            margin: auto;
+            max-width: 67rem;
         }
 
         @include desktop {
@@ -24,6 +26,10 @@
             
             @include tablet {
                 padding-top: 0.75rem;
+            }
+
+            @include desktop {
+                padding-top: 0;
             }
         }
 
