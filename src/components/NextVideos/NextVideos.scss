@@ -9,20 +9,23 @@
         @include display-layout ($mobile-padding 0, 0 $mobile-margin);
 
         @include tablet {
-            @include display-layout ($tablet-padding, 0 $tablet-margin); 
-            margin: auto;
-            max-width: 67rem;
+            @include display-layout ($tablet-padding, 0); 
         }
 
         @include desktop {
             margin: 0;
             padding: 0;
+            max-width: 67rem;
         }
         
         &__section-title {
             color: $Silver;
             font-size: 0.8125rem;
             font-weight: 700;
+
+            @include tablet {
+                font-size: 0.75rem;
+            }
         }
 
         &__content {

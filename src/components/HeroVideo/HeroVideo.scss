@@ -13,19 +13,20 @@
            padding: 0 $tablet-padding;
         }
 
-        @include desktop {
-            @include desktop-layout(0 $tablet-padding);
-        }
-
         &__display {
-            max-width: 100%;
+            aspect-ratio: 16/9;
+            width: 100%;
             margin: auto;
             display: block; //Removes extra spacing at the button when desktop leayout applied
-            aspect-ratio: 16/9;
+            object-fit: cover;
+            
 
             @include tablet {
-                max-width: 53rem;
                 width: 100%;
+            }
+
+            @include desktop {
+                max-width: 53.5rem;
             }
         }
     }

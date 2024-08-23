@@ -15,9 +15,17 @@
         margin-right: 0;
     }
 
+    @include desktop {
+        gap: 2.25rem;
+    }
+
     &__avatar {
         @include avatar;   
         background-color: $Mercury;
+
+        @include tablet {
+            margin-left: 0.875rem;
+        }
     }
 
     &__user-info {
