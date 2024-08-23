@@ -8,7 +8,6 @@ const HeroVideo = ({ heroImage }) => {
                 <video className="hero-video__container__display"
                     poster={heroImage}
                     controls>
-    
                 </video>
             </div>
         </section>

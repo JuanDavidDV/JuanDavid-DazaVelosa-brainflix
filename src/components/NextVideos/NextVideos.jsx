@@ -1,7 +1,7 @@
 import NextVideosCards from "../NextVideosCards/NextVideosCards";
 import "./NextVideos.scss"
 
-const NextVideos = ({ videos }) => {
+const NextVideos = ({ videos, selectedVideo }) => {
     console.log(videos);
     return (
         <section className="next-videos">
@@ -14,6 +14,7 @@ const NextVideos = ({ videos }) => {
                                 nextVideoImage = {video.image}
                                 nextVideoTitle = {video.title}
                                 nextVideoChannel = {video.channel}
+                                onClick = {() => selectedVideo(video.id)}
                             />
                         </li>
                     ))}

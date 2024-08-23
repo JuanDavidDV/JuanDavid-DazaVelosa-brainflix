@@ -12,7 +12,12 @@ function App() {
   const [heroVideoData, setHeroVideoData] = useState(VideoData[0]);
 
   const otherVideos = VideoData.filter((video) => video.id !== heroVideoData.id)
- 
+
+  const updateHeroVideoData = (videoId) => {
+    const selectVideo = VideoData.find((video) => video.id === videoId);
+    setHeroVideoData(selectVideo);
+  }
+
 return (
     <main className="video-page">
       <Header />
@@ -37,7 +42,10 @@ return (
           />
         </div>
         <div className="video-page__lower-section--next-videos">
-          <NextVideos videos={otherVideos}/>
+          <NextVideos 
+            videos={otherVideos}
+            selectedVideo={updateHeroVideoData}
+          />
         </div>
       </section>
     </main>
