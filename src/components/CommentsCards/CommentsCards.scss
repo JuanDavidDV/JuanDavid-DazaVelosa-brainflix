@@ -13,6 +13,10 @@
     @include tablet {
         padding-top: $tablet-padding;
         margin-right: 0;
+
+        @include tablet {
+            gap: 1.25rem;
+        }
     }
 
     @include desktop {

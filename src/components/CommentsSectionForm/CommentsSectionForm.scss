@@ -25,6 +25,10 @@
         &__form {
             display: flex;
             gap: 1rem;
+
+            @include tablet {
+                gap: 1.25rem;
+            }
         
             &__avatar {
                 @include avatar;
