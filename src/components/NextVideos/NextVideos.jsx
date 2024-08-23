@@ -2,7 +2,7 @@ import NextVideosCards from "../NextVideosCards/NextVideosCards";
 import "./NextVideos.scss"
 
 const NextVideos = ({ videos, selectedVideo }) => {
-    console.log(videos);
+
     return (
         <section className="next-videos">
             <div className="next-videos__container">
