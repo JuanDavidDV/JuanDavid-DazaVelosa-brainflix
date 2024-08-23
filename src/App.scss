@@ -21,8 +21,8 @@
 
     &--next-videos {
         @include desktop {
-            width: auto;
-            padding: 2.25rem 0 7rem $tablet-gutters;
+            width: 41%;
+            padding: 2.25rem 0 2.75rem $tablet-gutters;
             border-left: 0.0625rem solid $Mercury;
         }
     }

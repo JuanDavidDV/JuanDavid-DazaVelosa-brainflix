@@ -13,13 +13,13 @@
         flex-direction: column;
 
         @include tablet {
-            @include display-layout($tablet-padding, 0);
+            @include display-layout($mobile-padding $tablet-padding, 0);
             flex-direction: row;
             justify-content: space-between;
         }
 
         @include desktop {
-            @include desktop-layout ($tablet-padding);
+            @include desktop-layout ($mobile-padding $tablet-padding);
             justify-content: stretch;
             max-width: 67rem;
         }

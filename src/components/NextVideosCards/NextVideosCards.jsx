@@ -4,7 +4,7 @@ const NextVideosCards = ({ nextVideoImage, nextVideoTitle, nextVideoChannel }) =
     return (
         <article className="next-videos-cards__container">
             <div className="next-videos-cards__container__image-box">
-                <img className="next-videos-cards__container__image" src={nextVideoImage}/>
+                <img className="next-videos-cards__container__image-box--poster" src={nextVideoImage}/>
             </div>
             <div className="next-videos-cards__container__details">
                 <h3 className="next-videos-cards__container__details--title">{nextVideoTitle}</h3>

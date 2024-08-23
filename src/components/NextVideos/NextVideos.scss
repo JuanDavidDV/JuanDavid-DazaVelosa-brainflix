@@ -26,6 +26,10 @@
             @include tablet {
                 font-size: 0.75rem;
             }
+            
+            @include desktop {
+                padding-bottom: $tablet-padding;
+            }
         }
 
         &__content {

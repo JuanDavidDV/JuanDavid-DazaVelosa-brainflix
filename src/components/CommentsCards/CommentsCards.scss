@@ -23,7 +23,7 @@
         @include avatar;   
         background-color: $Mercury;
 
-        @include tablet {
+        @include desktop {
             margin-left: 0.875rem;
         }
     }
