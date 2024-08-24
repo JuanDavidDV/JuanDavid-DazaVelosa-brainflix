@@ -11,7 +11,7 @@ import NextVideos from './components/NextVideos/NextVideos';
 function App() {
   const [heroVideoData, setHeroVideoData] = useState(VideoData[0]); //Creates state for Hero Video content
 
-  const otherVideos = VideoData.filter((video) => video.id !== heroVideoData.id)  //Excludes current video being display in the Hero section, from the Next Video list
+  const otherVideos = VideoData.filter((video) => video.id !== heroVideoData.id)  //Excludes current video being display in the Hero section from being display in the Next Video list
 
   const updateHeroVideoData = (videoId) => {  //Function sets value to "setHeroVideData" for the useState, which will be in charge to update the Hero Video content and details
     const selectVideo = VideoData.find((video) => video.id === videoId);  
