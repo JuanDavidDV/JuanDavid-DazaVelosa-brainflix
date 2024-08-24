@@ -40,10 +40,7 @@
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
-
-        @include tablet {
-            width: 27%;
-        }
+        width: 12rem;
 
         @include desktop {
             width: 79%;
