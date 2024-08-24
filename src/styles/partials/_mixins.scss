@@ -104,3 +104,11 @@
     top: 0;
     left: 0.75rem;
 }
+
+@mixin hero-video-poster {
+    aspect-ratio: 16/9;
+    width: 100%;
+    margin: auto;
+    display: block; //Removes extra spacing at the button when desktop layout applied
+    object-fit: cover;
+}

@@ -58,11 +58,7 @@
                 &__search-bar {
                     position: relative;
                     width: 100%;
-    
-                    @include tablet {
-    
-                    }
-    
+     
                     &--icon {
                         @include icon-in-button;
                     }
@@ -112,7 +108,6 @@
                     }
                 }
             }
-    
         }
     }
 }

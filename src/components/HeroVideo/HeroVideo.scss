@@ -1,4 +1,3 @@
-@use '../../styles/partials/fonts' as *;
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/media-query' as *;
@@ -14,12 +13,7 @@
         }
 
         &__display {
-            aspect-ratio: 16/9;
-            width: 100%;
-            margin: auto;
-            display: block; //Removes extra spacing at the button when desktop leayout applied
-            object-fit: cover;
-            
+            @include hero-video-poster;           
 
             @include tablet {
                 width: 100%;
