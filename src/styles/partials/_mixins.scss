@@ -121,6 +121,14 @@
     padding: $mobile-padding 0;
 }
 
+@mixin comments-cards {
+    display: flex;
+    gap: 1rem;
+    border-top: 0.0625rem solid $Mercury;
+    padding-top: $mobile-padding;
+    margin-right: $mobile-margin;
+}
+
 @mixin desktop-lower-section {
     display: flex;
     justify-content: space-between;

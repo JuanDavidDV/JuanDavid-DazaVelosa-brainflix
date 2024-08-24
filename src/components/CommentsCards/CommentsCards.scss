@@ -4,11 +4,7 @@
 @use '../../styles/partials/media-query' as *;
 
 .comments-cards__container{
-    display: flex;
-    gap: 1rem;
-    border-top: 0.0625rem solid $Mercury;
-    padding-top: $mobile-padding;
-    margin-right: $mobile-margin;
+    @include comments-cards;
 
     @include tablet {
         padding-top: $tablet-padding;

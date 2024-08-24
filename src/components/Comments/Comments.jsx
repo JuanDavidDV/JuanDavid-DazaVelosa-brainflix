@@ -1,4 +1,4 @@
-import CommentsCards from "../CommentsCards/CommentsCards"
+import CommentsCards from "../CommentsCards/CommentsCards";
 import './Comments.scss';
 
 const Comments = ({ heroComments }) => {
@@ -7,7 +7,7 @@ const Comments = ({ heroComments }) => {
         <section className="comments">
             <div className="comments__container">
                 <ul className="comments__container__content">
-                    {heroComments.map((comment) => (
+                    {heroComments.map((comment) => (    //Returns an array of the current comments from the Hero Video selected
                         <li className="comments__container__content__list" key={comment.id}>
                             <CommentsCards 
                                 name={comment.name}
