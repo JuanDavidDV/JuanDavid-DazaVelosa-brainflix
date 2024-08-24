@@ -1,6 +1,6 @@
-import "./HeroVideoDetails.scss"
-import viewsIcon from "../../assets/icons/views.svg"
-import likesIcon from "../../assets/icons/likes.svg"
+import "./HeroVideoDetails.scss";
+import viewsIcon from "../../assets/icons/views.svg";
+import likesIcon from "../../assets/icons/likes.svg";
 
 const HeroVideoDetails = ({ heroTitle, heroChannel, heroTimestamp, heroViews, heroLikes, heroDescription }) => {
 

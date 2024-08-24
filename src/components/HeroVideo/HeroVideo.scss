@@ -15,10 +15,6 @@
         &__display {
             @include hero-video-poster;           
 
-            @include tablet {
-                width: 100%;
-            }
-
             @include desktop {
                 max-width: 53.5rem;
             }

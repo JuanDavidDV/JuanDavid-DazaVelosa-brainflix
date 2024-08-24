@@ -112,3 +112,20 @@
     display: block; //Removes extra spacing at the button when desktop layout applied
     object-fit: cover;
 }
+
+@mixin heroVideo-channel-details {
+    display: flex;
+    gap: 1.90rem;
+    border-top: 0.0625rem solid $Mercury;
+    border-bottom: 0.0625rem solid $Mercury;
+    padding: $mobile-padding 0;
+}
+
+@mixin desktop-lower-section {
+    display: flex;
+    justify-content: space-between;
+    @include desktop-layout (0 0 0 $tablet-padding);
+    max-width: 67rem;
+    padding-top: 0;
+    height: 100%;
+}

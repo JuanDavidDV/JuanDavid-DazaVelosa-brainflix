@@ -4,12 +4,7 @@
 
 .video-page__lower-section {
     @include desktop {
-        display: flex;
-        justify-content: space-between;
-        @include desktop-layout (0 0 0 $tablet-padding);
-        max-width: 67rem;
-        padding-top: 0;
-        height: 100%;
+        @include desktop-lower-section;
     }
 
     &--video-details {
