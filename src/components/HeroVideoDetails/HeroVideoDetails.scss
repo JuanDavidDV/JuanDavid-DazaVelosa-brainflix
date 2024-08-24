@@ -80,6 +80,10 @@
 
                     &--icon {
                         padding-right: 0.65rem;
+
+                        @include tablet {
+                            margin: auto;
+                        }
                     }
 
                     &--numbers {
@@ -93,6 +97,10 @@
 
                     &--icon {
                         padding-right: 0.65rem;
+
+                        @include tablet {
+                            margin: auto;
+                        }
                     }
 
                     &--numbers{
