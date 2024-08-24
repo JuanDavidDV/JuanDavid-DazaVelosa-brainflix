@@ -7,21 +7,21 @@ const CommentsSectionForm = ({ heroCommentsNumber }) => {
         <section className="comment-input">
             <div className="comment-input__container">
                 <h3 className="comment-input__container--total-comments">{heroCommentsNumber.length} Comments</h3>
-            <form className="comment-input__container__form">
-                <img className="comment-input__container__form__avatar" src={avatar}/>
-                <div className="comment-input__container__form__wrapper">
-                    <div className="comment-input__container__form__wrapper__ui">
-                        <label className="comment-input__container__form__wrapper__ui__label-comment" htmlFor="inputUserComment">
-                                JOIN THE CONVERSATION
-                        </label>
-                        <textarea className="comment-input__container__form__wrapper__ui__input-comment" name="inputUserComment" placeholder="Add a new comment"/>
-                    </div>  
-                    <button className="comment-input__container__form__wrapper__button">
-                        <img className="comment-input__container__form__wrapper__button--icon" src={addCommentIcon} alt="comment-icon"/>
-                        COMMENT
-                    </button>
-                </div>
-            </form>
+                <form className="comment-input__container__form">
+                    <img className="comment-input__container__form__avatar" src={avatar} alt="avatar"/>
+                    <div className="comment-input__container__form__wrapper">
+                        <div className="comment-input__container__form__wrapper__ui">
+                            <label className="comment-input__container__form__wrapper__ui__label-comment" htmlFor="inputUserComment">
+                                    JOIN THE CONVERSATION
+                            </label>
+                            <textarea className="comment-input__container__form__wrapper__ui__input-comment" name="inputUserComment" placeholder="Add a new comment" type="text" id="inputUserComment"/>
+                        </div>  
+                        <button className="comment-input__container__form__wrapper__button">
+                            <img className="comment-input__container__form__wrapper__button--icon" src={addCommentIcon} alt="comment-icon"/>
+                            COMMENT
+                        </button>
+                    </div>
+                </form>
             </div>
         </section>
     );

@@ -15,11 +15,11 @@ const HeroVideoDetails = ({ heroTitle, heroChannel, heroTimestamp, heroViews, he
                     </div>
                     <div className="hero-video-details__container__box--two">
                         <div className="hero-video-details__container__box--two__views-info">
-                            <img className="hero-video-details__container__box--two__views-info--icon" src={viewsIcon}/>
+                            <img className="hero-video-details__container__box--two__views-info--icon" src={viewsIcon} alt="views-icon"/>
                             <p className="hero-video-details__container__box--two__views-info--numbers">{heroViews}</p>
                         </div>
                         <div className="hero-video-details__container__box--two__likes-info">
-                            <img className="hero-video-details__container__box--two__likes-info--icon" src={likesIcon}/>
+                            <img className="hero-video-details__container__box--two__likes-info--icon" src={likesIcon} alt="likes-icon"/>
                             <p className="hero-video-details__container__box--two__likes-info--numbers">{heroLikes}</p>
                         </div>
                     </div>
@@ -31,7 +31,6 @@ const HeroVideoDetails = ({ heroTitle, heroChannel, heroTimestamp, heroViews, he
 };
 
 export default HeroVideoDetails;
-
 
 //Function creates a dynamic timestamp
 export const timeAgo = (timeStampAgo) => {
