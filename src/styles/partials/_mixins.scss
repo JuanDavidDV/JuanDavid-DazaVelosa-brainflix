@@ -34,7 +34,7 @@
 
     &:focus {
         outline: none;  //Removes default active style
-        border-color: $BrainFlix-Blue;
+        border: 0.125rem solid $BrainFlix-Blue;
     }
 
     &::placeholder {
