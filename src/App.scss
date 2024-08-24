@@ -2,7 +2,7 @@
 @use './styles/partials/variables' as *;
 @use './styles/partials/mixins' as *;
 
-.video-page__lower-section {
+.app__lower-section {
     @include desktop {
         @include desktop-lower-section;
     }

@@ -19,13 +19,13 @@ function App() {
   }
 
 return (
-    <main className="video-page">
+    <main className="app">
       <Header />
       <HeroVideo 
          heroImage = {heroVideoData.image}
       />
-      <section className="video-page__lower-section">
-        <div className="video-page__lower-section--video-details">
+      <section className="app__lower-section">
+        <div className="app__lower-section--video-details">
           <HeroVideoDetails 
               heroTitle = {heroVideoData.title}
               heroChannel = {heroVideoData.channel}
@@ -41,7 +41,7 @@ return (
               heroComments = {heroVideoData.comments} 
           />
         </div>
-        <div className="video-page__lower-section--next-videos">
+        <div className="app__lower-section--next-videos">
           <NextVideos 
             videosList={otherVideos}
             selectedVideo={updateHeroVideoData}
