@@ -43,7 +43,7 @@ return (
         </div>
         <div className="video-page__lower-section--next-videos">
           <NextVideos 
-            videos={otherVideos}
+            videosList={otherVideos}
             selectedVideo={updateHeroVideoData}
           />
         </div>

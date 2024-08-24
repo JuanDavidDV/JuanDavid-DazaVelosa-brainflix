@@ -129,6 +129,15 @@
     margin-right: $mobile-margin;
 }
 
+@mixin next-video-image {
+    width: 6.37rem;
+    height: 4rem;
+    border-radius: 0.25rem;
+    background-color: $Mercury;
+    flex-shrink: 0; //Prevents images to shrink on mobile layout
+    cursor: pointer;
+}
+
 @mixin desktop-lower-section {
     display: flex;
     justify-content: space-between;

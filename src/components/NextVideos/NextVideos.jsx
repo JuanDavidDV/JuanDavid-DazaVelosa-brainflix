@@ -1,14 +1,14 @@
 import NextVideosCards from "../NextVideosCards/NextVideosCards";
-import "./NextVideos.scss"
+import "./NextVideos.scss";
 
-const NextVideos = ({ videos, selectedVideo }) => {
+const NextVideos = ({ videosList, selectedVideo }) => {
 
     return (
         <section className="next-videos">
             <div className="next-videos__container">
                 <p className="next-videos__container__section-title">NEXT VIDEOS</p>
                 <ul className="next-videos__container__content">
-                    {videos.map((video) => (
+                    {videosList.map((video) => (
                         <li className="next-videos__container__content__list" key={video.id}>
                             <NextVideosCards 
                                 nextVideoImage = {video.image}
