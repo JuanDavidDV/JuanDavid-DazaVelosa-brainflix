@@ -8,7 +8,7 @@ import CommentsSectionForm from './components/CommentsSectionForm/CommentsSectio
 import Comments from './components/Comments/Comments';
 import NextVideos from './components/NextVideos/NextVideos';
 
-function App() {
+function App() { 
   const [heroVideoData, setHeroVideoData] = useState(VideoData[0]); //Creates state for Hero Video content
 
   const otherVideos = VideoData.filter((video) => video.id !== heroVideoData.id)  //Excludes current video being display in the Hero section from being display in the Next Video list
