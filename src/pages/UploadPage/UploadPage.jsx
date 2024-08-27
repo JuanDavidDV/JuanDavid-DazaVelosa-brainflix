@@ -1,4 +1,5 @@
 import Header from "../../components/Header/Header";
+import UploadPageForm from "../../components/UploadPageForm/UploadPageForm";
 import './UploadPage.scss'
 
 const UploadPage = () => {
@@ -12,6 +13,7 @@ const UploadPage = () => {
                     <h1 className="upload-page__container--title">Upload Video</h1>
                 </div>
             </main>
+            <UploadPageForm />
         </>
     )
 }  
