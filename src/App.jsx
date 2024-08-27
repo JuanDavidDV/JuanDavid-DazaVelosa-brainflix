@@ -21,9 +21,7 @@ function App() {
 return (
     <main className="app">
       <Header />
-      <HeroVideo 
-         heroImage = {heroVideoData.image}
-      />
+      <HeroVideo heroImage = {heroVideoData.image} />
       <section className="app__lower-section">
         <div className="app__lower-section--video-details">
           <HeroVideoDetails 
@@ -34,12 +32,8 @@ return (
               heroLikes = {heroVideoData.likes}
               heroDescription = {heroVideoData.description}
           />
-          <CommentsSectionForm 
-              heroCommentsNumber = {heroVideoData.comments}
-          />
-          <Comments 
-              heroComments = {heroVideoData.comments} 
-          />
+          <CommentsSectionForm heroCommentsNumber = {heroVideoData.comments} />
+          <Comments heroComments = {heroVideoData.comments} />
         </div>
         <div className="app__lower-section--next-videos">
           <NextVideos 
