@@ -1,0 +1,16 @@
+@use '../../styles/partials/media-query' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.upload-page {
+    @include section-main($White);
+    border-top: 0.0625rem solid $Mercury;
+
+    &__container {
+       @include display-layout($mobile-padding 0, 0 $mobile-margin);
+    
+        &--title {
+            padding-top: 0.5rem;
+        } 
+    }
+}

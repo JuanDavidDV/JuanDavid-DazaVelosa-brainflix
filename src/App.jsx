@@ -20,7 +20,7 @@ function App() {
 
 return (
     <main className="app">
-      <Header />
+      <Header />  {/*REMEMBER TO CHANGE CODE STRUCUTURE, USING <HEADER> FIRST AND THEN <MAIN>*/}
       <HeroVideo heroImage = {heroVideoData.image} />
       <section className="app__lower-section">
         <div className="app__lower-section--video-details">
