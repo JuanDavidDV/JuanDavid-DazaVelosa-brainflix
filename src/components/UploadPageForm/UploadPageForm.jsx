@@ -5,7 +5,7 @@ const UploadPageForm = () => {
     return (
         <form className="upload-form">
             <div className="upload-form__container">
-                <label className="upload-form__container__label" htmlFor="videoThumbnailUploadUpload">
+                <label className="upload-form__container__label" htmlFor="videoThumbnailUpload">
                     VIDEO THUMBNAIL
                 </label>
                 <img className="upload-form__container__video-thumbnail"
