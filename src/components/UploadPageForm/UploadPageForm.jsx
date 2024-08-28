@@ -8,7 +8,9 @@ const UploadPageForm = () => {
             <div className="upload-form__container">
                 <div className="upload-form__container__image-box">
                     <label className="upload-form__container__image-box__label" htmlFor="videoThumbnailUpload">VIDEO THUMBNAIL</label>
-                    <img className="upload-form__container__image-box__video-thumbnail" src={uploadVideoPreview} alt="videoThumbnailUpload"/>
+                    <div className="upload-form__container__image-box__sub-container">
+                        <img className="upload-form__container__image-box__sub-container--video-thumbnail" src={uploadVideoPreview} alt="videoThumbnailUpload"/>
+                    </div> 
                 </div>
                 <div className="upload-form__container__input-box">
                     <div className="upload-form__container__input-box__video-title">

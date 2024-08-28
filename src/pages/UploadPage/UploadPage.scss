@@ -7,7 +7,7 @@
     border-top: 0.0625rem solid $Mercury;
 
     &__container {
-       @include display-layout($mobile-padding 0, 0 $mobile-margin);
+       @include display-layout($mobile-padding 0 0 0, 0 $mobile-margin);
     
         &--title {
             padding-top: 0.5rem;
