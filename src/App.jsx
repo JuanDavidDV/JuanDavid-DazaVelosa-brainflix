@@ -32,7 +32,7 @@ return (
               heroLikes = {heroVideoData.likes}
               heroDescription = {heroVideoData.description}
           />
-          <CommentsSectionForm heroCommentsNumber = {heroVideoData.comments} />
+          <CommentsSectionForm heroCommentsNumber = {heroVideoData.comments} /> {/*CHECK FOR LABEL SIZE IN ALL DISPLAYS!!! */}
           <Comments heroComments = {heroVideoData.comments} />
         </div>
         <div className="app__lower-section--next-videos">
