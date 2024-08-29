@@ -18,6 +18,7 @@
             }
 
             &__sub-container {
+                margin-top: 0.25rem;
                 aspect-ratio: 16/9;
                 background-color: $Mercury;
                 width: 100%;
@@ -29,6 +30,62 @@
                     border-radius: 0.25rem;
                     display: block;
                 }
+            }
+        }
+
+        &__input-box {
+            &__video-title {
+                display: flex;
+                flex-direction: column;
+
+                &__label {
+                    padding-top: $mobile-padding;
+                    @extend .upload-form__container__image-box__label;
+                }
+
+                &__input {
+                   @include input-area;
+                   padding-left: 0.75rem;
+                }
+            }
+
+            &__video-description {
+                display: flex;
+                flex-direction: column;
+                padding: $mobile-padding 0;
+
+                &__label {
+                    @extend .upload-form__container__image-box__label;
+                }
+
+                &__input {
+                    @include input-area;
+                    resize: none; //prevents resizing comment box
+                    height: 6rem;
+                    padding: 0.75rem;
+                }
+            }
+        }
+
+        &__options-box {
+            display: flex;
+            flex-direction: column;
+            gap: 2.75rem;
+
+            &--publish-button {
+                @include button;
+
+                &--icon {
+                    @include icon-in-button;
+                }
+            }
+
+            &--cancel {
+                color: $BrainFlix-Blue;
+                text-decoration: none;
+                text-align: center;
+                font-size: 0.75rem;
+                font-weight: 600; 
             }
         }
     }

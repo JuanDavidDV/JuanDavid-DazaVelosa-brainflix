@@ -27,7 +27,7 @@ const UploadPageForm = () => {
                         <img className="upload-form__container__options-box--publish-button--icon" src={publishIcon}/>
                         PUBLISH
                     </button>
-                    <a className="upload-form__container__option-box--cancel" href="../../index.html">CANCEL</a>
+                    <a className="upload-form__container__options-box--cancel" href="../../index.html">CANCEL</a>
                 </div>
             </div>
         </form>
