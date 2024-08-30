@@ -1,0 +1,24 @@
+@use '../../styles/partials/media-query' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.home-page__lower-section {
+    @include desktop {
+        @include desktop-lower-section;
+    }
+
+    &--video-details {
+        @include desktop {
+            width: 93%;
+            padding: 2.25rem 0 0 0;
+        }
+    }
+
+    &--next-videos {
+        @include desktop {
+            width: 41%;
+            padding: 2.25rem 0 2.75rem $tablet-gutters;
+            border-left: 0.0625rem solid $Mercury;
+        }
+    }
+}
