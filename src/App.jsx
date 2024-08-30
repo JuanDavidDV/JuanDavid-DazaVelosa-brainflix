@@ -6,10 +6,12 @@ import HomePage from './pages/HomePage/HomePage';
 function App() { 
 
 return (
-    <main className="app">
-      <Header />  {/*REMEMBER TO CHANGE CODE STRUCUTURE, USING <HEADER> FIRST AND THEN <MAIN>*/}
-      <HomePage />
-    </main>
+  <BrowserRouter>
+    <Header />
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    </Routes>
+  </BrowserRouter>
   );
 };
 
