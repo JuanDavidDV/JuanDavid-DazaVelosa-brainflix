@@ -21,12 +21,14 @@
         &__top {
             @include desktop {
                 display: flex;
+                gap: $tablet-gutters;
+                border-bottom: 0.0625rem solid $Mercury;
             }
     
             &__image-box {
                 
                 @include desktop {
-                    width: 45%;
+                    width: 49.7%;
                 }
 
                 &__label {
@@ -68,6 +70,7 @@
 
                 @include desktop {
                     width: 100%;
+                    align-self: baseline;
                 }
                 &__video-title {
                     display: flex;
@@ -76,16 +79,20 @@
                     &__label {
                         padding-top: $mobile-padding;
                         @extend .upload-form__container__top__image-box__label;
+                    
+                        @include desktop {
+                            padding-top: 0;
+                        }
                     }
 
                     &__input {
-                    @include input-area;
-                    padding-left: 0.75rem;
+                        @include input-area;
+                        padding-left: 0.75rem;
 
-                    @include tablet {
-                        width: 100%;
-                        padding: 0.75rem;
-                    }
+                        @include tablet {
+                            width: 100%;
+                            padding: 0.75rem;
+                        }
                     }
                 }
 
@@ -97,6 +104,11 @@
                     @include tablet {
                         border-bottom: 0.0625rem solid $Mercury;
                         padding: $mobile-padding 0 $tablet-padding 0;
+                    }
+
+                    @include desktop {
+                        padding: $tablet-padding 0 2rem 0;
+                        border-bottom: 0;
                     }
 
                     &__label {
