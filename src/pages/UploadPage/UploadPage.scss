@@ -10,7 +10,12 @@
        @include display-layout($mobile-padding 0 0 0, 0 $mobile-margin);
 
        @include tablet {
-        @include display-layout ($tablet-padding 0 0 0, 0 $tablet-margin)
+            @include display-layout ($tablet-padding 0 0 0, 0 $tablet-margin);
+       }
+
+       @include desktop {
+            @include desktop-layout ($tablet-padding $tablet-padding 0 $tablet-padding);
+            max-width: 67rem;
        }
     
         &--title {
