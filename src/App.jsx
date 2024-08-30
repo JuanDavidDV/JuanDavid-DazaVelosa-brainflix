@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import VideoData from './data/video-details.json';
 import './App.scss';
 import Header from './components/Header/Header';
