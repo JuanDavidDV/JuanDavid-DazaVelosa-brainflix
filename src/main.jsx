@@ -8,6 +8,6 @@ import UploadPage from './pages/UploadPage/UploadPage.jsx' //{/*REMEMBER TO REMO
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App /> {/*REMEMBER TO CHANGE BACK TO APP*/}
+    <App />
   </StrictMode>,
 )
