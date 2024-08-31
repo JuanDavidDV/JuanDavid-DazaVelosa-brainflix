@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header__container">
-                <a className="header__container__logo__link" href="../../index.html">
+                <a className="header__container__logo__link" href="/">
                     <img className="header__container__logo" src={brainFlixLogo} alt="brainFlix-logo"/>
                 </a>
                 <div className="header__container__wrapper">
