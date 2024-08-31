@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header__container">
-                <Link to="/upload" className="header__container__logo__link">
+                <Link to="/" className="header__container__logo__link">
                     <img className="header__container__logo" src={brainFlixLogo} alt="brainFlix-logo"/>
                 </Link>
                 <div className="header__container__wrapper">
