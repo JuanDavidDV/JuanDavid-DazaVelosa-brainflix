@@ -21,10 +21,12 @@ const Header = () => {
                         <img className="header__container__wrapper__box__avatar" src={avatar} alt="avatar"/>
                     </div>
                     <div className="header__container__wrapper__button"> 
-                        <button className="header__container__wrapper__button__upload--button">
-                            <img className="header__container__wrapper__button__upload--icon" src={upload} alt="upload-icon"/>
-                            UPLOAD
-                        </button>
+                        <Link to="/upload">
+                            <button className="header__container__wrapper__button__upload--button">
+                                <img className="header__container__wrapper__button__upload--icon" src={upload} alt="upload-icon"/>
+                                UPLOAD
+                            </button>
+                        </Link>
                         <img className="header__container__wrapper__box__avatar--tablet" src={avatar} alt="avatar"/>
                     </div>
                 </div>

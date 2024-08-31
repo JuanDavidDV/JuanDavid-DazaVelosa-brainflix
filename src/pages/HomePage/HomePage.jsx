@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useParams } from "react-router-dom";
 import VideoData from '../../data/video-details.json';
 import './HomePage.scss';
 import HeroVideo from "../../components/HeroVideo/HeroVideo";
@@ -16,6 +17,10 @@ const HomePage = () => {
       const selectVideo = VideoData.find((video) => video.id === videoId);  
       setHeroVideoData(selectVideo);  //Assigns value to setHeroVideoData
     }
+
+    const { videoId } = useParams();
+
+    let nextVideoId = videoId
 
     return (
         <main className="home-page">
