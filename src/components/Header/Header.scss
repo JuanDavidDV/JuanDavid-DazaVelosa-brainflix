@@ -65,6 +65,10 @@
     
                     &--field {
                         @include input-area;
+
+                        @include tablet {
+                            margin-right: $tablet-gutters;
+                        }
                     }
                 }
     
@@ -82,10 +86,6 @@
                             display: inline-block;
                             @include avatar;
                         }
-
-                        @include desktop {
-                            margin-left: 1rem;
-                        }
                     }
                 }
             } 
@@ -96,6 +96,11 @@
                 @include tablet {
                     width: auto;
                     display: flex;
+                    gap: $tablet-gutters;
+                }
+
+                &--link {
+                    text-decoration: none;
                 }
     
                 &__upload {
@@ -104,7 +109,12 @@
                     }
     
                     &--button {
-                        @include button;                    
+                        @include button;
+                        
+                        @include tablet {
+                            margin: 0;
+                        }
+                                         
                     }
                 }
             }

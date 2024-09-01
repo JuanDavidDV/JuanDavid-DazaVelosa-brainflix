@@ -21,7 +21,7 @@ const Header = () => {
                         <img className="header__container__wrapper__box__avatar" src={avatar} alt="avatar"/>
                     </div>
                     <div className="header__container__wrapper__button"> 
-                        <Link to="/upload"> {/*FIX ME */}
+                        <Link to="/upload" className="header__container__wrapper__button--link"> 
                             <button className="header__container__wrapper__button__upload--button">
                                 <img className="header__container__wrapper__button__upload--icon" src={upload} alt="upload-icon"/>
                                 UPLOAD
