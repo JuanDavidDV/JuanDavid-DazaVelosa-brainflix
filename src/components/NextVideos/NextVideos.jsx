@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import NextVideosCards from "../NextVideosCards/NextVideosCards";
 import "./NextVideos.scss";
+import { useParams } from "react-router-dom";
 
 const NextVideos = ({ videosList, selectedVideo }) => {
 

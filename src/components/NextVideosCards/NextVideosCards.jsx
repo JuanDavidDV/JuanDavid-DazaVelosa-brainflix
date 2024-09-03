@@ -1,11 +1,7 @@
-import { useParams } from "react-router-dom";
 import "./NextVideosCards.scss";
 
 const NextVideosCards = ({ nextVideoImage, nextVideoTitle, nextVideoChannel }) => {
-    const { videoId } = useParams();
-
-    console.log(videoId);
-    
+  
     return (
         <article className="next-videos-cards__container">
             <div className="next-videos-cards__container__image-box">

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import VideoData from '../../data/video-details.json';
 import './HomePage.scss';
@@ -20,7 +20,12 @@ const HomePage = () => {
 
     const { videoId } = useParams();
 
-    let nextVideoId = videoId
+    let nextVideoId = videoId;
+
+    useEffect(() => {
+        console.log("render")
+    }, [heroVideoData]);
+
 
     return (
         <main className="home-page">
