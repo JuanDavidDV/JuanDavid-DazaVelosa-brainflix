@@ -1,0 +1,36 @@
+@use '../../styles/partials/media-query' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.not-found-page {
+    @include section-main ($White);
+    height: 25rem;
+    margin: 2rem auto;
+    text-align: center;
+    
+
+    &__container {
+        @include display-layout ($mobile-padding 0, 0 $mobile-margin); 
+        height: 100%;
+        border-top: 0.0625rem solid $Mercury;
+        border-bottom: 0.0625rem solid $Mercury;
+    
+        &--title {
+            margin: $mobile-margin 0;
+        }
+
+        &--text {
+            margin: 5rem 0;
+        } 
+
+        &__button {
+            @include button;
+            font-size: 0.9rem;
+
+            @include tablet {
+                margin: auto;
+                width: 12rem;
+            }
+        }
+    }
+}
