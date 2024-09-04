@@ -17,5 +17,17 @@ export default class VideoApi {
             console.error(error);
         }
     };
+
+    async getNextVideoList() {
+        try {
+            const nextVideoList = await axios.get(this.baseUrl + "/videos" + "?api_key=" + this.apiKey);
+            const nextVideoListData = nextVideoList.data;
+            console.log(nextVideoListData);
+            return nextVideoListData;
+        }
+        catch(error) {
+            console.error(error);
+        }
+    }
 }
 
