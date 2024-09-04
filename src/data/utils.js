@@ -11,7 +11,6 @@ export default class VideoApi {
         try {
             const videoDetailsResult = await axios.get(this.baseUrl + "/videos/" + this.videoId + "?api_key=" + this.apiKey);
             const videoDetailsData = videoDetailsResult.data;
-            console.log(videoDetailsData)
             return videoDetailsData;
         }
         catch(error) {

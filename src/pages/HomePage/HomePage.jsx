@@ -29,8 +29,12 @@ const HomePage = () => {
         }
     }, [])
 
+    useEffect(() => {
+        console.log(heroVideoData, "test");
+    }, [heroVideoData]);
 
 
+console.log(heroVideoData)
 
 
        
@@ -45,10 +49,9 @@ const HomePage = () => {
 
     return (
         <main className="home-page">
-            {console.log(heroVideoData)}
-            {/* <HeroVideo 
-                heroImage = {heroVideoData.image}
-            /> */}
+            
+            {heroVideoData ? <HeroVideo heroImage = {heroVideoData.image} /> : ""}
+
             {/* <section className="home-page__lower-section">
                 <div className="home-page__lower-section--video-details">
                     <HeroVideoDetails 
