@@ -17,7 +17,6 @@ const HomePage = () => {
     const fetchVideoDetails = async (heroVideoId) => {
         const defaultVideosDetails = new VideoApi(heroVideoId);
         const videoDetails = await defaultVideosDetails.getVideoDetails();
-        console.log(videoDetails.image);
         setHeroVideoData(videoDetails);
     };
 
@@ -31,17 +30,14 @@ const HomePage = () => {
 
     const fetchNextVideoList = async() => {
         const defaultNextVideoList = new VideoApi();
-        const nextVideoList = await defaultNextVideoList.getNextVideoList();
-        console.log(nextVideoList);
-        setNextVideoList(nextVideoList);
+        const nextVideoListData = await defaultNextVideoList.getNextVideoList();
+        setNextVideoList(nextVideoListData);
+
     };
 
     useEffect(() => {
         fetchNextVideoList();
-    }, [])
-
-
-
+    }, []);
 
    //const otherVideos = VideoData.filter((video) => video.id !== heroVideoData.id)  //Excludes current video being display in the Hero section from being display in the Next Video list
   
@@ -74,9 +70,9 @@ const HomePage = () => {
                     }
                 </div>
                  <div className="home-page__lower-section--next-videos">
-                    { nextVideoList && <NextVideos 
+                    {nextVideoList && <NextVideos 
                         videosList = {nextVideoList}
-                        //selectedVideo = {updateHeroVideoData}
+                        currentVideoId = {heroVideoData.id}
                     />}
                 </div>  
              </section> 
