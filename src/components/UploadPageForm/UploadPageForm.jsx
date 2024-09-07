@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import './UploadPageForm.scss';
 import uploadVideoPreview from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg'
@@ -29,7 +30,7 @@ const UploadPageForm = () => {
                         <img className="upload-form__container__options-box--publish-button--icon" src={publishIcon}/>
                         PUBLISH
                     </button>
-                    <a className="upload-form__container__options-box--cancel" href="../../index.html">CANCEL</a>
+                    <Link to ="/"className="upload-form__container__options-box--cancel">CANCEL</Link>
                 </div>
             </div>
         </form>
