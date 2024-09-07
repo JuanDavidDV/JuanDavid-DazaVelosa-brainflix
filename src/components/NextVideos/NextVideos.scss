@@ -34,6 +34,10 @@
 
         &__content {
             list-style-type: none;
+
+            &__list {
+                text-decoration: none;
+            }
         }
     }
 }
