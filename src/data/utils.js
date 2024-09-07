@@ -29,5 +29,9 @@ export default class VideoApi {
             console.error(error);
         }
     }
+
+    async postComment() {
+        
+    }
 }
 
