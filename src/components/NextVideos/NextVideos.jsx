@@ -4,7 +4,7 @@ import "./NextVideos.scss";
 import { useParams } from "react-router-dom";
 
 const NextVideos = ({ videosList, currentVideoId }) => {
-const nextVideos = videosList.filter((video) => video.id !== currentVideoId);
+const nextVideos = videosList.filter((video) => video.id !== currentVideoId);   //Excludes current video being display in the Hero section from being display in the Next Video list
 
     return (
         <section className="next-videos">

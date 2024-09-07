@@ -1,11 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './UploadPageForm.scss';
 import uploadVideoPreview from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg'
 
 const UploadPageForm = () => {
+    const handleSubmit = event => {
+        event.preventDefault();
+    }
+
+    const navigate = useNavigate();
+    const handleClick = () => {
+        alert("Video has been successfully uploaded!");
+        navigate("/");
+    }
+
     return (
-        <form className="upload-form">
+        <form className="upload-form" onSubmit={handleSubmit}>
             <div className="upload-form__container">
                 <div className="upload-form__container__top">
                     <div className="upload-form__container__top__image-box">
@@ -26,7 +36,7 @@ const UploadPageForm = () => {
                     </div>
                 </div>   
                 <div  className="upload-form__container__options-box">
-                    <button className="upload-form__container__options-box--publish-button">
+                    <button className="upload-form__container__options-box--publish-button" onClick={handleClick}>
                         <img className="upload-form__container__options-box--publish-button--icon" src={publishIcon}/>
                         PUBLISH
                     </button>
