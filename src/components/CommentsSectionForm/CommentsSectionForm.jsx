@@ -19,8 +19,11 @@ const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments 
             await newComment.postComment(newCommentObject);
             heroComments(currentVideoId);
             event.target.reset();
+        } 
+        if (newVideoComment.length === 0){
+            event.target.inputUserComment.classList.add("comment-input__container__form__wrapper__ui__input-comment--invalid");
         } else {
-
+            event.target.inputUserComment.classList.remove("comment-input__container__form__wrapper__ui__input-comment--invalid");
         }
     }
 
