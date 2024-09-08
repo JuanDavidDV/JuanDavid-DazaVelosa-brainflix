@@ -4,7 +4,6 @@ import avatar from "../../assets/images/Mohan-muruge.jpg";
 import addCommentIcon from "../../assets/icons/add_comment.svg";
 
 const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments }) => {
-    console.log(heroComments);
     const uploadComment = async event => {
         event.preventDefault(); //Prevents page to reload
         const newVideoComment = event.target.inputUserComment.value;
@@ -17,9 +16,9 @@ const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments 
 
         if(newVideoComment !== "") {
             const newComment = new VideoApi(currentVideoId);
-            await newComment.postComment(newCommentObject); 
-
-            console.log(newVideoComment);
+            await newComment.postComment(newCommentObject);
+            heroComments(currentVideoId);
+            event.target.reset();
         }
     }
 

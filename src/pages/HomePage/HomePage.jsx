@@ -56,7 +56,7 @@ const HomePage = () => {
                     {heroVideoData && <CommentsSectionForm
                         heroCommentsNumber = {heroVideoData.comments}
                         currentVideoId = {heroVideoData.id}
-                        heroComments = {heroVideoData.comments}
+                        heroComments = {fetchVideoDetails}
                         />
                     }
                     {heroVideoData && <Comments 
