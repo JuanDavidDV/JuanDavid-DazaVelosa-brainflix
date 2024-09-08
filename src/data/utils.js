@@ -22,7 +22,6 @@ export default class VideoApi {
         try {
             const nextVideoList = await axios.get(this.baseUrl + "/videos" + "?api_key=" + this.apiKey);
             const nextVideoListData = nextVideoList.data;
-            console.log(nextVideoListData);
             return nextVideoListData;
         }
         catch(error) {
@@ -30,8 +29,17 @@ export default class VideoApi {
         }
     }
 
-    async postComment() {
-        
+    async postComment(newComment) {
+        try {
+            const newVideoComment = await axios.post(this.baseUrl + "/videos/" + this.videoId + "/comments" + "?api_key=" + this.apiKey, newComment);
+            const newVideoCommentData = newVideoComment.data;
+            console.log(newVideoCommentData);
+            return newVideoCommentData;
+
+        }
+        catch(error) {
+            console.error(error);
+        }
     }
 }
 

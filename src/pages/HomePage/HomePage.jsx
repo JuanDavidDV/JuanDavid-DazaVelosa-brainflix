@@ -16,8 +16,8 @@ const HomePage = () => {
 
     const fetchVideoDetails = async (heroVideoId) => {
         const defaultVideosDetails = new VideoApi(heroVideoId);
-        const videoDetails = await defaultVideosDetails.getVideoDetails();
-        setHeroVideoData(videoDetails);
+        const videoDetailsData = await defaultVideosDetails.getVideoDetails();
+        setHeroVideoData(videoDetailsData);
     };
 
     useEffect(() => {
@@ -55,6 +55,8 @@ const HomePage = () => {
                     }
                     {heroVideoData && <CommentsSectionForm
                         heroCommentsNumber = {heroVideoData.comments}
+                        currentVideoId = {heroVideoData.id}
+                        heroComments = {heroVideoData.comments}
                         />
                     }
                     {heroVideoData && <Comments 

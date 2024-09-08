@@ -1,13 +1,33 @@
+import VideoApi from "../../data/utils";
 import "./CommentsSectionForm.scss";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import addCommentIcon from "../../assets/icons/add_comment.svg";
 
-const CommentsSectionForm = ({ heroCommentsNumber }) => {
+const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments }) => {
+    console.log(heroComments);
+    const uploadComment = async event => {
+        event.preventDefault(); //Prevents page to reload
+        const newVideoComment = event.target.inputUserComment.value;
+        console.log(newVideoComment)
+
+        const newCommentObject = {
+            name: "BrainFlix",
+            comment: newVideoComment
+            }
+
+        if(newVideoComment !== "") {
+            const newComment = new VideoApi(currentVideoId);
+            await newComment.postComment(newCommentObject); 
+
+            console.log(newVideoComment);
+        }
+    }
+
     return (
         <section className="comment-input">
             <div className="comment-input__container">
                 <h3 className="comment-input__container--total-comments">{heroCommentsNumber.length} Comments</h3>
-                <form className="comment-input__container__form">
+                <form className="comment-input__container__form" onSubmit={uploadComment}>
                     <img className="comment-input__container__form__avatar" src={avatar} alt="avatar"/>
                     <div className="comment-input__container__form__wrapper">
                         <div className="comment-input__container__form__wrapper__ui">

@@ -4,7 +4,7 @@ import uploadVideoPreview from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg'
 
 const UploadPageForm = () => {
-    const handleSubmit = event => {
+    const uploadSubmit = event => {
         event.preventDefault();
     }
 
@@ -15,7 +15,7 @@ const UploadPageForm = () => {
     }
 
     return (
-        <form className="upload-form" onSubmit={handleSubmit}>
+        <form className="upload-form" onSubmit={uploadSubmit}>
             <div className="upload-form__container">
                 <div className="upload-form__container__top">
                     <div className="upload-form__container__top__image-box">
