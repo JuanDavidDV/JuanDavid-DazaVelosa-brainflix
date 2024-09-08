@@ -1,4 +1,4 @@
-import VideoApi from "../../data/utilsApi";
+import VideoApi from "../../utilsJs/utilsApi";
 import "./CommentsSectionForm.scss";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import addCommentIcon from "../../assets/icons/add_comment.svg";

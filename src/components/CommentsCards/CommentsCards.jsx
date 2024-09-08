@@ -1,7 +1,7 @@
 import "./CommentsCards.scss";
-import VideoApi from "../../data/utilsApi";
-import { timeAgo } from "../HeroVideoDetails/HeroVideoDetails";
-import iconDelete from "../../assets/icons/icon-delete.svg"
+import VideoApi from "../../utilsJs/utilsApi";
+import { timeAgo } from "../../utilsJs/utilsFunctions";
+import iconDelete from "../../assets/icons/icon-delete.svg";
 
 const CommentsCards = ({ name, timestamp, comment, commentId, videoId, currentHeroComments }) => {
 
