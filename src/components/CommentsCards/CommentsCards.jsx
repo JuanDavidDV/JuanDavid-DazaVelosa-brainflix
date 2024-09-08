@@ -6,11 +6,11 @@ import iconDelete from "../../assets/icons/icon-delete.svg";
 const CommentsCards = ({ name, timestamp, comment, commentId, videoId, currentHeroComments }) => {
 
     const deleteComment = async (commentId) => {
-        const selectedDeleteComment = new VideoApi(videoId);
+        const selectedDeleteComment = new VideoApi(videoId);    //Creates instance for VideoApi class
         const deleteCommentById = await selectedDeleteComment.deleteComment(commentId); //deletes comment from API
-        const parent = document.getElementById(commentId);  //selects parent from
-        currentHeroComments(videoId);
-        return parent.remove();
+        const comment = document.getElementById(commentId);  //selects comment by ID to be deleted in the UI
+        currentHeroComments(videoId);   //Re-renders all comments to the page
+        return comment.remove();    //Removes comment
     }
 
     return (

@@ -4,10 +4,9 @@ import avatar from "../../assets/images/Mohan-muruge.jpg";
 import addCommentIcon from "../../assets/icons/add_comment.svg";
 
 const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments }) => {
-    const uploadComment = async event => {
+    const uploadComment = async event => { 
         event.preventDefault(); //Prevents page to reload
         const newVideoComment = event.target.inputUserComment.value;
-        console.log(newVideoComment)
 
         const newCommentObject = {
             name: "BrainFlix",
@@ -15,10 +14,10 @@ const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments 
             }
 
         if(newVideoComment !== "") {
-            const newComment = new VideoApi(currentVideoId);
-            const newCommentPost = await newComment.postComment(newCommentObject); //post new comment to API
-            heroComments(currentVideoId);
-            event.target.reset();
+            const newComment = new VideoApi(currentVideoId);    //creates instance for VideoApi class
+            const newCommentPost = await newComment.postComment(newCommentObject); //post new comment to the API
+            heroComments(currentVideoId);   //Re-renders all comments to the page
+            event.target.reset();   //Clears input fields after submitting a new comment
         } 
         if (newVideoComment.length === 0){
             event.target.inputUserComment.classList.add("comment-input__container__form__wrapper__ui__input-comment--invalid");

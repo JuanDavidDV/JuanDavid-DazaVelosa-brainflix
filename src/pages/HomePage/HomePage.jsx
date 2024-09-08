@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import VideoApi from '../../utilsJs/utilsApi';
+import VideoApi from '../../utilsJs/utilsApi';  //Imports API js class for calls using Axios
 import './HomePage.scss';
 import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import HeroVideoDetails from "../../components/HeroVideoDetails/HeroVideoDetails";
@@ -14,9 +14,9 @@ const HomePage = () => {
     const [heroVideoData, setHeroVideoData] = useState(null);   //Creates state for Hero Video content
     const [nextVideoList, setNextVideoList] = useState(null);   //Creates state for next video list 
 
-    const fetchVideoDetails = async (heroVideoId) => {
-        const defaultVideosDetails = new VideoApi(heroVideoId);
-        const videoDetailsData = await defaultVideosDetails.getVideoDetails();
+    const fetchVideoDetails = async (heroVideoId) => {  //Function created to get HeroVideo details
+        const defaultVideosDetails = new VideoApi(heroVideoId); //Creates instance for VideoApi class
+        const videoDetailsData = await defaultVideosDetails.getVideoDetails();  //Returns video details after API "get" call
         setHeroVideoData(videoDetailsData);
     };
 
@@ -24,13 +24,13 @@ const HomePage = () => {
         if(!videoId) {
             fetchVideoDetails(defaultVideoId);
         } else {
-            fetchVideoDetails(videoId)
+            fetchVideoDetails(videoId);
         }
-    }, [videoId, defaultVideoId]);
+    }, [videoId, defaultVideoId]);  //useEffect occurs when either defaultVideoId and/or videoId re-renders
 
-    const fetchNextVideoList = async() => {
-        const defaultNextVideoList = new VideoApi();
-        const nextVideoListData = await defaultNextVideoList.getNextVideoList();
+    const fetchNextVideoList = async() => { //Function created to get array of videos to be used under the "Next Videos section"
+        const defaultNextVideoList = new VideoApi();    //Creates instance for VideoApi class
+        const nextVideoListData = await defaultNextVideoList.getNextVideoList();    //Returns next videos
         setNextVideoList(nextVideoListData);
 
     };

@@ -1,5 +1,4 @@
-//This JS file was created to store API calls inside a blueprint class in order to keep a good 
-//application quality, concise information, and keep code DRY. 
+//This JS file was created to store API calls inside a blueprint Class to keep code DRY and organized. 
 
 import axios from "axios"
 
@@ -53,5 +52,5 @@ export default class VideoApi {
         catch(error) {
             console.error(error);
         }
-    }
+    };
 };
