@@ -2,7 +2,7 @@ import CommentsCards from "../CommentsCards/CommentsCards";
 import './Comments.scss';
 
 const Comments = ({ heroComments }) => {
-const sortComments = [...heroComments].sort((a ,b) => b.timestamp - a.timestamp); //Sort comments chronologically from newest to oldest 
+const sortComments = [...heroComments].sort((a ,b) => b.timestamp - a.timestamp);   //Sort comments chronologically from newest to oldest 
     return (
         <section className="comments">
             <div className="comments__container">

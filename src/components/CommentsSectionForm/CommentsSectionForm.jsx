@@ -19,6 +19,8 @@ const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments 
             await newComment.postComment(newCommentObject);
             heroComments(currentVideoId);
             event.target.reset();
+        } else {
+            
         }
     }
 
