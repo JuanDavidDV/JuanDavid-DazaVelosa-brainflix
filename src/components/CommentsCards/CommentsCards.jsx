@@ -2,7 +2,8 @@ import "./CommentsCards.scss";
 import { timeAgo } from "../HeroVideoDetails/HeroVideoDetails";
 import iconDelete from "../../assets/icons/icon-delete.svg"
 
-const CommentsCards = ({ name, timestamp, comment }) => {
+const CommentsCards = ({ name, timestamp, comment, commentId }) => {
+
     return (
         <article className="comments-cards__container">
             <div className="comments-cards__container__avatar"></div>   {/*Created to add gray default avatar*/}

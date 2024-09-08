@@ -33,7 +33,6 @@ export default class VideoApi {
         try {
             const newVideoComment = await axios.post(this.baseUrl + "/videos/" + this.videoId + "/comments" + "?api_key=" + this.apiKey, newComment);
             const newVideoCommentData = newVideoComment.data;
-            console.log(newVideoCommentData);
             return newVideoCommentData;
 
         }
@@ -41,4 +40,15 @@ export default class VideoApi {
             console.error(error);
         }
     };
+
+    async deleteComment(commentId) {
+        try {
+            const deleteVideoComment = await axios.delete(this.baseUrl + "/videos/" + this.videoId + "/comments/" + commentId + "?api_key=" + this.apiKey);
+            const deleteVideoCommentData = deleteVideoComment.data;
+            return deleteVideoCommentData;
+        }
+        catch(error) {
+            console.error(error);
+        }
+    }
 };

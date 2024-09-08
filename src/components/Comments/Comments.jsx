@@ -13,6 +13,7 @@ const sortComments = [...heroComments].sort((a ,b) => b.timestamp - a.timestamp)
                                 name={comment.name}
                                 timestamp={comment.timestamp}
                                 comment={comment.comment}
+                                commentId={comment.id}
                             />
                         </li>
                     ))}
