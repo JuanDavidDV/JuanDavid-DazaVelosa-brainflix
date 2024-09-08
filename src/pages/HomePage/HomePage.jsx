@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import VideoApi from '../../data/utils';
+import VideoApi from '../../data/utilsApi';
 import './HomePage.scss';
 import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import HeroVideoDetails from "../../components/HeroVideoDetails/HeroVideoDetails";

@@ -1,4 +1,4 @@
-import VideoApi from "../../data/utils";
+import VideoApi from "../../data/utilsApi";
 import "./CommentsSectionForm.scss";
 import avatar from "../../assets/images/Mohan-muruge.jpg";
 import addCommentIcon from "../../assets/icons/add_comment.svg";
@@ -20,7 +20,7 @@ const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments 
             heroComments(currentVideoId);
             event.target.reset();
         } else {
-            
+
         }
     }
 
