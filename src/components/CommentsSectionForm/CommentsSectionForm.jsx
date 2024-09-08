@@ -16,7 +16,7 @@ const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments 
 
         if(newVideoComment !== "") {
             const newComment = new VideoApi(currentVideoId);
-            await newComment.postComment(newCommentObject);
+            const newCommentPost = await newComment.postComment(newCommentObject); //post new comment to API
             heroComments(currentVideoId);
             event.target.reset();
         } 

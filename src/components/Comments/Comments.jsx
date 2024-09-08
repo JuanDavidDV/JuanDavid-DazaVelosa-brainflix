@@ -1,7 +1,7 @@
 import CommentsCards from "../CommentsCards/CommentsCards";
 import './Comments.scss';
 
-const Comments = ({ heroComments }) => {
+const Comments = ({ heroComments, currentVideoId, currentComments }) => {
 const sortComments = [...heroComments].sort((a ,b) => b.timestamp - a.timestamp);   //Sort comments chronologically from newest to oldest 
     return (
         <section className="comments">
@@ -14,6 +14,8 @@ const sortComments = [...heroComments].sort((a ,b) => b.timestamp - a.timestamp)
                                 timestamp={comment.timestamp}
                                 comment={comment.comment}
                                 commentId={comment.id}
+                                videoId={currentVideoId}
+                                currentHeroComments={currentComments}
                             />
                         </li>
                     ))}

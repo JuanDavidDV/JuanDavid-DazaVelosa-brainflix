@@ -2,7 +2,7 @@ import axios from "axios"
 
 export default class VideoApi {
     constructor(videoId) {
-        this.apiKey = "6d596f9e-9f33-449b-8b6e-a88a7b953d0f";
+        this.apiKey = "9f775a25-53c7-484d-9f4f-a51936074c66";
         this.baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
         this.videoId = videoId;
     }

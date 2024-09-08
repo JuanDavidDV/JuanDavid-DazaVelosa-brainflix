@@ -61,6 +61,8 @@ const HomePage = () => {
                     }
                     {heroVideoData && <Comments 
                         heroComments = {heroVideoData.comments}
+                        currentVideoId = {heroVideoData.id}
+                        currentComments = {fetchVideoDetails}
                         />
                     }
                 </div>
