@@ -41,7 +41,7 @@ export const timeAgo = (timeStampAgo) => {
         } else if(secondsAgo < 60) {
             return parseInt(secondsAgo) + " sec ago";
         } else if (secondsAgo < 3600) {
-            return parseInt(secondsAgo / 60) + " min ago";
+            return parseInt(secondsAgo / 60) + " mins ago";
         } else if (secondsAgo <= 86400) {
             return parseInt(secondsAgo / 3600) + " hours ago";
         } else if (secondsAgo <= 2628000) {
