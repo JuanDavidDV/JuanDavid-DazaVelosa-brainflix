@@ -1,6 +1,6 @@
 //This JS file was created to store API calls inside a blueprint Class to keep code DRY and organized 
 
-import axios from "axios"
+import axios from "axios";
 
 export default class VideoApi {
     constructor(videoId) {
