@@ -5,14 +5,15 @@ import axios from "axios";
 export default class VideoApi {
     constructor(videoId) {
         this.apiKey = "9f775a25-53c7-484d-9f4f-a51936074c66";
-        this.baseUrl = "https://unit-3-project-api-0a5620414506.herokuapp.com";
+        this.baseUrl = "http://localhost:8080";
         this.videoId = videoId;
     }
 
     async getVideoDetails() {
         try {
-            const videoDetailsResult = await axios.get(this.baseUrl + "/videos/" + this.videoId + "?api_key=" + this.apiKey);
+            const videoDetailsResult = await axios.get("http://localhost:8080" + "/videos/" + this.videoId);
             const videoDetailsData = videoDetailsResult.data;
+            console.log(videoDetailsData);
             return videoDetailsData;
         }
         catch(error) {
