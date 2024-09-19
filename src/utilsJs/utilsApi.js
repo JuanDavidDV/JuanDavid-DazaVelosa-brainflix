@@ -4,16 +4,14 @@ import axios from "axios";
 
 export default class VideoApi {
     constructor(videoId) {
-        this.apiKey = "9f775a25-53c7-484d-9f4f-a51936074c66";
-        this.baseUrl = "http://localhost:8080";
+        this.baseUrl = import.meta.env.VITE_API_URL;
         this.videoId = videoId;
     }
 
     async getVideoDetails() {
         try {
-            const videoDetailsResult = await axios.get("http://localhost:8080" + "/videos/" + this.videoId);
+            const videoDetailsResult = await axios.get(this.baseUrl + "/videos/" + this.videoId);
             const videoDetailsData = videoDetailsResult.data;
-            console.log(videoDetailsData);
             return videoDetailsData;
         }
         catch(error) {
