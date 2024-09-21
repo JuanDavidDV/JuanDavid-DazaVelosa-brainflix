@@ -10,9 +10,8 @@ export default class VideoApi {
 
     async getVideoDetails() {
         try {
-            const videoDetailsResult = await axios.get(this.baseUrl + "/videos/" + this.videoId);
-            const videoDetailsData = videoDetailsResult.data;
-            return videoDetailsData;
+            const { data } = await axios.get(this.baseUrl + "/videos/" + this.videoId);
+            return data;
         }
         catch(error) {
             console.error(error);
