@@ -41,8 +41,6 @@ const HomePage = () => {
         fetchNextVideoList();
     }, []);
 
-    console.log(heroVideoData);
-
     return (
         <main className="home-page">
             {heroVideoData ? <HeroVideo heroImage = {heroVideoData.image} /> : "loading..." /*Includes a small skeleton holder showing it is loading*/} 

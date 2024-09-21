@@ -20,9 +20,8 @@ export default class VideoApi {
 
     async getNextVideoList() {
         try {
-            const nextVideoList = await axios.get(this.baseUrl + "/videos" + "?api_key=" + this.apiKey);
-            const nextVideoListData = nextVideoList.data;
-            return nextVideoListData;
+            const { data } = await axios.get(this.baseUrl + "/videos/");
+            return data;
         }
         catch(error) {
             console.error(error);
