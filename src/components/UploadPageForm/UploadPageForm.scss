@@ -67,7 +67,6 @@
             }
 
             &__input-box {
-
                 @include desktop {
                     width: 100%;
                     align-self: baseline;
@@ -100,16 +99,6 @@
                     @extend .upload-form__container__top__input-box__video-title;
                     padding: $mobile-padding 0;
 
-                    @include tablet {
-                        border-bottom: 0.0625rem solid $Mercury;
-                        padding: $mobile-padding 0 $tablet-padding 0;
-                    }
-
-                    @include desktop {
-                        padding: $tablet-padding 0 2rem 0;
-                        border-bottom: 0;
-                    }
-
                     &__label {
                         @extend .upload-form__container__top__image-box__label;
                     }
@@ -125,6 +114,28 @@
                             height: 6rem;
                             padding: 0.75rem;
                         }
+                    }
+                }
+                &__video-image {
+                    @extend .upload-form__container__top__input-box__video-description;
+                    padding: 0;
+
+                    @include tablet {
+                        border-bottom: 0.0625rem solid $Mercury;
+                        padding: $mobile-padding 0 $tablet-padding 0;
+                    }
+
+                    @include desktop {
+                        padding: $tablet-padding 0 2rem 0;
+                        border-bottom: 0;
+                    }
+
+                    &__label {
+                        @extend .upload-form__container__top__image-box__label;
+                    }
+
+                    &-file {
+                        cursor: pointer;
                     }
                 }
             }
