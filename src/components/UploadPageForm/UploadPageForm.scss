@@ -97,8 +97,7 @@
                 }
 
                 &__video-description {
-                    display: flex;
-                    flex-direction: column;
+                    @extend .upload-form__container__top__input-box__video-title;
                     padding: $mobile-padding 0;
 
                     @include tablet {

@@ -33,6 +33,9 @@ const UploadPageForm = () => {
                             <label className="upload-form__container__top__input-box__video-description__label" htmlFor="videoUploadDescription">ADD A VIDEO DESCRIPTION</label>
                             <textarea className="upload-form__container__top__input-box__video-description__input" name="videoUploadDescription" placeholder="Add a description to your video" type="text" id="videoUploadDescription"/>
                         </div>
+                        <div className="">
+
+                        </div>
                     </div>
                 </div>   
                 <div  className="upload-form__container__options-box">
