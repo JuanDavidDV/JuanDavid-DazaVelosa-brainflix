@@ -1,13 +1,20 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useRef } from "react";
 import './UploadPageForm.scss';
 import uploadVideoPreview from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg'
 
-
 document.title = "BrainFlix Upload";    //Setup page title in the browser
+
 const UploadPageForm = () => {
+    const formRef = useRef();
     const uploadSubmit = event => {
         event.preventDefault();
+
+        //Add new video details from front-end user input to the back-end server and then updates the state with the response
+        const title = formRef.current.title.value;
+        const image = formRef.current.image.value;
+        const description = formRef.current.description.value;
     }
 
     const navigate = useNavigate();
