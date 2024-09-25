@@ -9,7 +9,7 @@ const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments 
         const newVideoComment = event.target.inputUserComment.value;
 
         const newCommentObject = {
-            name: "BrainFlix",
+            name: "Mohan Muruge",
             comment: newVideoComment
             }
 

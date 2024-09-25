@@ -8,7 +8,8 @@ document.title = "BrainFlix Upload";    //Setup page title in the browser
 
 const UploadPageForm = () => {
     const formRef = useRef();
-    const uploadSubmit = event => {
+
+    const uploadSubmit = async event => {
         event.preventDefault();
 
         //Add new video details from front-end user input to the back-end server and then updates the state with the response

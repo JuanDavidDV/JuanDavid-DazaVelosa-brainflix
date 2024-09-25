@@ -28,6 +28,15 @@ export default class VideoApi {
         }
     };
 
+    async postNewVideo() {
+        try {
+
+        }
+        catch(error) {
+
+        }
+    };
+
     async postComment(newComment) {
         try {
             const newVideoComment = await axios.post(this.baseUrl + "/videos/" + this.videoId + "/comments" + "?api_key=" + this.apiKey, newComment);
