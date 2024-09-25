@@ -3,6 +3,8 @@ import './UploadPageForm.scss';
 import uploadVideoPreview from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg'
 
+
+document.title = "BrainFlix Upload";    //Setup page title in the browser
 const UploadPageForm = () => {
     const uploadSubmit = event => {
         event.preventDefault();
