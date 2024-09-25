@@ -12,9 +12,9 @@ const UploadPageForm = () => {
         event.preventDefault();
 
         //Add new video details from front-end user input to the back-end server and then updates the state with the response
-        const title = formRef.current.title.value;
-        const image = formRef.current.image.value;
-        const description = formRef.current.description.value;
+        const title = formRef.current.videoUploadTitle.value;
+        const image = formRef.current.videoUploadImage.value;
+        const description = formRef.current.videoUploadDescription.value;
     }
 
     const navigate = useNavigate();
@@ -44,7 +44,7 @@ const UploadPageForm = () => {
                         </div>
                         <div className="upload-form__container__top__input-box__video-image">
                             <label className="upload-form__container__top__input-box__video-image__label" htmlFor="videoUploadChannel">VIDEO IMAGE (optional)</label>
-                            <input type="file" className="upload-form__container__top__input-box__video-image--file" id="userFile" name="userFile"></input>                 
+                            <input type="file" className="upload-form__container__top__input-box__video-image--file" id="videoUploadImage" name="videoUploadImage"></input>                 
                         </div>
                     </div>
                 </div>   
