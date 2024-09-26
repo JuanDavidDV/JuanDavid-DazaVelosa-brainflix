@@ -3,6 +3,7 @@ import { useRef } from "react";
 import './UploadPageForm.scss';
 import uploadVideoPreview from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg'
+import VideoApi from "../../utilsJs/utilsApi";
 
 document.title = "BrainFlix Upload";    //Setup page title in the browser
 
@@ -16,6 +17,12 @@ const UploadPageForm = () => {
         const title = formRef.current.videoUploadTitle.value;
         const image = formRef.current.videoUploadImage.value;
         const description = formRef.current.videoUploadDescription.value;
+
+        if(title !== "" && description !== "") {
+            const newVideo = new VideoApi();
+            const newVideoPost = await newVideo.postNewVideo({ title, image, description });
+            event.target.reset();   //Clears input fields after submitting a new comment
+        }
     }
 
     const navigate = useNavigate();
@@ -25,7 +32,7 @@ const UploadPageForm = () => {
     }
 
     return (
-        <form className="upload-form" onSubmit={uploadSubmit}>
+        <form className="upload-form" onSubmit={uploadSubmit} ref={formRef}>
             <div className="upload-form__container">
                 <div className="upload-form__container__top">
                     <div className="upload-form__container__top__image-box">
@@ -50,7 +57,7 @@ const UploadPageForm = () => {
                     </div>
                 </div>   
                 <div  className="upload-form__container__options-box">
-                    <button className="upload-form__container__options-box--publish-button" onClick={handleClick}>
+                    <button className="upload-form__container__options-box--publish-button">
                         <img className="upload-form__container__options-box--publish-button--icon" src={publishIcon}/>
                         PUBLISH
                     </button>

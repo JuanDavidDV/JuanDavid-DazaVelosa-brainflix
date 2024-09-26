@@ -17,7 +17,6 @@ const HomePage = () => {
     const fetchVideoDetails = async (heroVideoId) => {  //Function created to get HeroVideo details
         const defaultVideosDetails = new VideoApi(heroVideoId); //Creates instance for VideoApi class
         const videoDetailsData = await defaultVideosDetails.getVideoDetails();  //Returns video details after API "get" call
-        console.log(videoDetailsData);
         setHeroVideoData(videoDetailsData);
 
     };
