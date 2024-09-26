@@ -28,7 +28,7 @@ export default class VideoApi {
         }
     };
 
-    async postNewVideo({ title, image, description }) {
+    async postNewVideo(title, image, description) {
         try {
             const { data } = await axios.post(this.baseUrl + "/videos/", { title, image, description });
             console.log(data);

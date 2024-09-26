@@ -5,10 +5,11 @@ import uploadVideoPreview from '../../assets/images/Upload-video-preview.jpg';
 import publishIcon from '../../assets/icons/publish.svg'
 import VideoApi from "../../utilsJs/utilsApi";
 
-document.title = "BrainFlix Upload";    //Setup page title in the browser
 
 const UploadPageForm = () => {
+
     const formRef = useRef();
+    const navigate = useNavigate();
 
     const uploadSubmit = async event => {
         event.preventDefault();
@@ -18,17 +19,26 @@ const UploadPageForm = () => {
         const image = formRef.current.videoUploadImage.value;
         const description = formRef.current.videoUploadDescription.value;
 
-        if(title !== "" && description !== "") {
+        if(title && description) {
             const newVideo = new VideoApi();
-            const newVideoPost = await newVideo.postNewVideo({ title, image, description });
+            const newVideoPost = await newVideo.postNewVideo(title, image, description);
+            console.log(newVideoPost);
             event.target.reset();   //Clears input fields after submitting a new comment
+            alert("Video has been successfully uploaded!");
+            navigate("/");
         }
-    }
 
-    const navigate = useNavigate();
-    const handleClick = () => {
-        alert("Video has been successfully uploaded!");
-        navigate("/");
+        if(title.length === 0) {
+            formRef.current.videoUploadTitle.classList.add("upload-form__container__top__input-box__video-title__input--invalid");
+        } else {
+            formRef.current.videoUploadTile.classList.remove("upload-form__container__top__input-box__video-title__input--invalid");
+        }
+
+        if(description.length === 0) {
+            formRef.current.videoUploadDescription.classList.add("upload-form__container__top__input-box__video-description__input--invalid");
+        } else {
+            formRef.current.videoUploadDescription.classList.remove("upload-form__container__top__input-box__video-description__input--invalid");
+        }
     }
 
     return (
