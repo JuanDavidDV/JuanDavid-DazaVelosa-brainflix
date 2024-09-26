@@ -18,7 +18,7 @@ const UploadPageForm = () => {
         const title = formRef.current.videoUploadTitle.value;
         const image = formRef.current.videoUploadImage.value;
         const description = formRef.current.videoUploadDescription.value;
-
+ 
         if(title && description) {
             const newVideo = new VideoApi();
             const newVideoPost = await newVideo.postNewVideo(title, image, description);
@@ -30,14 +30,9 @@ const UploadPageForm = () => {
 
         if(title.length === 0) {
             formRef.current.videoUploadTitle.classList.add("upload-form__container__top__input-box__video-title__input--invalid");
-        } else {
-            formRef.current.videoUploadTile.classList.remove("upload-form__container__top__input-box__video-title__input--invalid");
-        }
-
-        if(description.length === 0) {
+        } 
+        if  (description.length === 0) {
             formRef.current.videoUploadDescription.classList.add("upload-form__container__top__input-box__video-description__input--invalid");
-        } else {
-            formRef.current.videoUploadDescription.classList.remove("upload-form__container__top__input-box__video-description__input--invalid");
         }
     }
 
