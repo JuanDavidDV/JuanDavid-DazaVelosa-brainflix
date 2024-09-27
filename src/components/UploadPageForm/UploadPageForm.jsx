@@ -22,7 +22,6 @@ const UploadPageForm = () => {
         if(title && description) {
             const newVideo = new VideoApi();
             const newVideoPost = await newVideo.postNewVideo(title, image, description);
-            console.log(newVideoPost);
             event.target.reset();   //Clears input fields after submitting a new comment
             alert("Video has been successfully uploaded!");
             navigate("/");

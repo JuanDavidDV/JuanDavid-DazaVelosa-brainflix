@@ -68,7 +68,7 @@ const HomePage = () => {
                     }
                 </div>
                  <div className="home-page__lower-section--next-videos">
-                    {nextVideoList && <NextVideos 
+                    {nextVideoList && heroVideoData.id && <NextVideos 
                         videosList = {nextVideoList}
                         currentVideoId = {heroVideoData.id}
                     />}
