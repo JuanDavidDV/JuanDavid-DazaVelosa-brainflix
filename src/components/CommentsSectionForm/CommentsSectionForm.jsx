@@ -11,7 +11,7 @@ const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments 
         const newCommentObject = {
             name: "Mohan Muruge",
             comment: newVideoComment
-            }
+        };
 
         if(newVideoComment) {
             const newComment = new VideoApi(currentVideoId);    //creates instance for VideoApi class
