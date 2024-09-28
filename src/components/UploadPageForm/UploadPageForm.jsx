@@ -17,11 +17,17 @@ const UploadPageForm = () => {
         //Add new video details from front-end user input to the back-end server and then updates the state with the response
         const title = formRef.current.videoUploadTitle.value;
         const image = formRef.current.videoUploadImage.value;
-        const description = formRef.current.videoUploadDescription.value;
- 
+        const description = formRef.current.videoUploadDescription.value;    
+        
+        const newUploadVideo = {
+            title: title,
+            image: image, 
+            description: description
+        }
+         
         if(title && description) {
             const newVideo = new VideoApi();
-            const newVideoPost = await newVideo.postNewVideo(title, image, description);
+            const newVideoPost = await newVideo.postNewVideo(newUploadVideo);
             event.target.reset();   //Clears input fields after submitting a new comment
             alert("Video has been successfully uploaded!");
             navigate("/");

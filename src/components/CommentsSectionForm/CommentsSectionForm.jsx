@@ -13,7 +13,7 @@ const CommentsSectionForm = ({ heroCommentsNumber, currentVideoId, heroComments 
             comment: newVideoComment
             }
 
-        if(newVideoComment !== "") {
+        if(newVideoComment) {
             const newComment = new VideoApi(currentVideoId);    //creates instance for VideoApi class
             const newCommentPost = await newComment.postComment(newCommentObject); //post new comment to the API
             heroComments(currentVideoId);   //Re-renders all comments to the page
