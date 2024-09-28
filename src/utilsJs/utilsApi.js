@@ -51,9 +51,8 @@ export default class VideoApi {
 
     async deleteComment(commentId) {
         try {
-            const deleteVideoComment = await axios.delete(this.baseUrl + "/videos/" + this.videoId + "/comments/" + commentId + "?api_key=" + this.apiKey);
-            const deleteVideoCommentData = deleteVideoComment.data;
-            return deleteVideoCommentData;
+            const { data } = await axios.delete(this.baseUrl + "/videos/" + this.videoId + "/comments/" + commentId);
+            return data;
         }
         catch(error) {
             console.error(error);
