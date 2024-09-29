@@ -62,7 +62,6 @@ export default class VideoApi {
     async likeVideo() {
         try {
             const { data } = await axios.put(this.baseUrl + "/videos/" + this.videoId + "/likes");
-            console.log(data);
             return data;
         }
         catch(error) {
