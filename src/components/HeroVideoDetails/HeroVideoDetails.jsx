@@ -1,9 +1,22 @@
 import "./HeroVideoDetails.scss";
+import VideoApi from "../../utilsJs/utilsApi";
 import { timeAgo } from "../../utilsJs/utilsFunctions";
+import { useState, useEffect } from "react";
 import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
 
 const HeroVideoDetails = ({ heroTitle, heroChannel, heroTimestamp, heroViews, heroLikes, heroDescription, heroVideoId }) => {
+    const [ likes, setLikes] = useState(null);
+
+    useEffect(() => {
+        setLikes(heroLikes)
+    }, [heroLikes]);
+
+    const likeVideo = async (mainVideoId) => {
+        const selectedVideoLike = new VideoApi(mainVideoId);
+        const likeVideo = await selectedVideoLike.likeVideo();
+        setLikes(likeVideo);
+    };
 
     return (
         <section className="hero-video-details">
@@ -21,7 +34,7 @@ const HeroVideoDetails = ({ heroTitle, heroChannel, heroTimestamp, heroViews, he
                         </div>
                         <div className="hero-video-details__container__box--two__likes-info">
                             <img className="hero-video-details__container__box--two__likes-info--icon" src={likesIcon} onClick={() => likeVideo(heroVideoId)} alt="likes-icon"/>
-                            <p className="hero-video-details__container__box--two__likes-info--numbers">{heroLikes}</p>
+                            <p className="hero-video-details__container__box--two__likes-info--numbers">{likes}</p>
                         </div>
                     </div>
                 </div>

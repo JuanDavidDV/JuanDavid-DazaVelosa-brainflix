@@ -18,7 +18,6 @@ const HomePage = () => {
         const defaultVideosDetails = new VideoApi(heroVideoId); //Creates instance for VideoApi class
         const videoDetailsData = await defaultVideosDetails.getVideoDetails();  //Returns video details after API "get" call
         setHeroVideoData(videoDetailsData);
-
     };
 
     useEffect(() => {
