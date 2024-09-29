@@ -3,7 +3,7 @@ import { timeAgo } from "../../utilsJs/utilsFunctions";
 import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
 
-const HeroVideoDetails = ({ heroTitle, heroChannel, heroTimestamp, heroViews, heroLikes, heroDescription }) => {
+const HeroVideoDetails = ({ heroTitle, heroChannel, heroTimestamp, heroViews, heroLikes, heroDescription, heroVideoId }) => {
 
     return (
         <section className="hero-video-details">
@@ -20,7 +20,7 @@ const HeroVideoDetails = ({ heroTitle, heroChannel, heroTimestamp, heroViews, he
                             <p className="hero-video-details__container__box--two__views-info--numbers">{heroViews}</p>
                         </div>
                         <div className="hero-video-details__container__box--two__likes-info">
-                            <img className="hero-video-details__container__box--two__likes-info--icon" src={likesIcon} alt="likes-icon"/>
+                            <img className="hero-video-details__container__box--two__likes-info--icon" src={likesIcon} onClick={() => likeVideo(heroVideoId)} alt="likes-icon"/>
                             <p className="hero-video-details__container__box--two__likes-info--numbers">{heroLikes}</p>
                         </div>
                     </div>

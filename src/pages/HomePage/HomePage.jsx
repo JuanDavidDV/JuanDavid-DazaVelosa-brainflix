@@ -52,6 +52,7 @@ const HomePage = () => {
                         heroViews = {heroVideoData.views}
                         heroLikes = {heroVideoData.likes}
                         heroDescription = {heroVideoData.description}
+                        heroVideoId = {heroVideoData.id}
                         />
                     }
                     {heroVideoData && <CommentsSectionForm

@@ -96,7 +96,8 @@
                     align-items: start;
 
                     &--icon {
-                        padding-right: 0.65rem;
+                        margin-right: 0.65rem;
+                        cursor: pointer;
 
                         @include tablet {
                             margin: auto;
