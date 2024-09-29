@@ -41,7 +41,9 @@ const HomePage = () => {
 
     return (
         <main className="home-page">
-            {heroVideoData ? <HeroVideo heroImage = {heroVideoData.image} /> : "loading..." /*Includes a small skeleton holder showing it is loading*/} 
+            {heroVideoData ? <HeroVideo 
+                heroImage = {heroVideoData.image}
+                heroVideo = {heroVideoData.video} /> : "loading..." /*Includes a small skeleton holder showing it is loading*/} 
             <section className="home-page__lower-section">
                 <div className="home-page__lower-section--video-details">
                     {heroVideoData && <HeroVideoDetails 
