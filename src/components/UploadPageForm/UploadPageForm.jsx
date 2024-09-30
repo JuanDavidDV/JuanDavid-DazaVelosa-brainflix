@@ -6,9 +6,9 @@ import publishIcon from '../../assets/icons/publish.svg'
 import VideoApi from "../../utilsJs/utilsApi";
 
 const DEFAULT_FORM_STATE = {
-    title: '',
-    imageUrl: '',
-    description: ''
+    title: "",
+    imageUrl: "",
+    description: ""
 }
 
 const UploadPageForm = () => {
