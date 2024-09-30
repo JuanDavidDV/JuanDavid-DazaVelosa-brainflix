@@ -4,6 +4,7 @@ import './UploadPageForm.scss';
 import publishIcon from '../../assets/icons/publish.svg'
 import VideoApi from "../../utilsJs/utilsApi";
 
+//Creates an object containing constant values
 const DEFAULT_FORM_STATE = {
     title: "",
     imageUrl: "",
@@ -11,18 +12,18 @@ const DEFAULT_FORM_STATE = {
 }
 
 const UploadPageForm = () => {
-    const [formDetails, setFormDetails] = useState(DEFAULT_FORM_STATE);
     const navigate = useNavigate();
+    const [formDetails, setFormDetails] = useState(DEFAULT_FORM_STATE); //Setup initial values to be empty strings
 
     const convertImage = e => {
         const file = e.target.files[0];
         if(file) {
-            const url = URL.createObjectURL(file);
-            updateFormDetails('imageUrl', url)
+            const url = URL.createObjectURL(file);  //Converts user image into URL 
+            updateFormDetails('imageUrl', url);
         }
     };
 
-    const updateFormDetails = (prop, value) => {
+    const updateFormDetails = (prop, value) => {    //Dynamic function to update title, imageUrl and description of new video
         setFormDetails(prevDetails => ({
             ...prevDetails,
             [prop]: value
@@ -33,8 +34,8 @@ const UploadPageForm = () => {
         event.preventDefault();
          
         if(formDetails.title && formDetails.description) {
-            const newVideo = new VideoApi();
-            await newVideo.postNewVideo(formDetails);
+            const newVideo = new VideoApi();    //Creates instance for VideoApi class
+            await newVideo.postNewVideo(formDetails); 
             setFormDetails(DEFAULT_FORM_STATE); // reset form to default state
             alert("Video has been successfully uploaded!");
             navigate("/");
@@ -61,11 +62,11 @@ const UploadPageForm = () => {
                     <div className="upload-form__container__top__input-box">
                         <div className="upload-form__container__top__input-box__video-title">
                             <label className="upload-form__container__top__input-box__video-title__label" htmlFor="videoUploadTitle">TITLE YOUR VIDEO</label>
-                            <input className="upload-form__container__top__input-box__video-title__input" name="videoUploadTitle" onChange={(e) => updateFormDetails('title', e.target.value)} value={formDetails.title} type="text" placeholder="Add a title to your video" id="videoUploadTitle"/>
+                            <input className="upload-form__container__top__input-box__video-title__input" name="videoUploadTitle" onChange={(e) => updateFormDetails('title', e.target.value) /*Updates title information when entered*/} value={formDetails.title /*value for new video title*/} type="text" placeholder="Add a title to your video" id="videoUploadTitle"/>
                         </div>
                         <div className="upload-form__container__top__input-box__video-description">
                             <label className="upload-form__container__top__input-box__video-description__label" htmlFor="videoUploadDescription">ADD A VIDEO DESCRIPTION</label>
-                            <textarea className="upload-form__container__top__input-box__video-description__input" name="videoUploadDescription" onChange={(e) => updateFormDetails('description', e.target.value)} value={formDetails.description} placeholder="Add a description to your video" type="text" id="videoUploadDescription"/>
+                            <textarea className="upload-form__container__top__input-box__video-description__input" name="videoUploadDescription" onChange={(e) => updateFormDetails('description', e.target.value) /*Updates description when entered*/} value={formDetails.description /*value for new video description*/} placeholder="Add a description to your video" type="text" id="videoUploadDescription"/>
                         </div>
                         <div className="upload-form__container__top__input-box__video-image">
                             <label className="upload-form__container__top__input-box__video-image__label" htmlFor="videoUploadChannel">VIDEO IMAGE (optional)</label>
