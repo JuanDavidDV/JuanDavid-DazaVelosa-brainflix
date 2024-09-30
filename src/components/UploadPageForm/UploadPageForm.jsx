@@ -29,7 +29,7 @@ const UploadPageForm = () => {
         }));
     }
 
-    const uploadSubmit = async event => {
+    const uploadVideo = async event => {
         event.preventDefault();
          
         if(formDetails.title && formDetails.description) {
@@ -48,9 +48,8 @@ const UploadPageForm = () => {
         }
     }
 
-
     return (
-        <form className="upload-form" onSubmit={uploadSubmit}>
+        <form className="upload-form" onSubmit={uploadVideo}>
             <div className="upload-form__container">
                 <div className="upload-form__container__top">
                     <div className="upload-form__container__top__image-box">
