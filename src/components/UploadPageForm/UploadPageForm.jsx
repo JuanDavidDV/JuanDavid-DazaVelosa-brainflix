@@ -56,7 +56,7 @@ const UploadPageForm = () => {
                     <div className="upload-form__container__top__image-box">
                         <label className="upload-form__container__top__image-box__label" htmlFor="videoThumbnailUpload">VIDEO THUMBNAIL</label>
                         <div className="upload-form__container__top__image-box__sub-container">
-                            <img className="upload-form__container__top__image-box__sub-container--video-thumbnail" src={formDetails.imageUrl || "http://localhost:8080/images/Upload-video-preview.jpg"} alt="videoThumbnailUpload"/>
+                            <img className="upload-form__container__top__image-box__sub-container--video-thumbnail" src={formDetails.imageUrl || "https://brainflix-api12-20dc90ca1c11.herokuapp.com/images/Upload-video-preview.jpg"} alt="videoThumbnailUpload"/>
                         </div> 
                     </div>
                     <div className="upload-form__container__top__input-box">
