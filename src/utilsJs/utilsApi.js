@@ -10,7 +10,7 @@ export default class VideoApi {
 
     async getVideoDetails() {
         try {
-            const { data } = await axios.get(this.baseUrl + "/videos/" + this.videoId);
+            const { data } = await axios.get(this.baseUrl + "videos/" + this.videoId);
             return data;
         }
         catch(error) {
@@ -20,7 +20,7 @@ export default class VideoApi {
 
     async getNextVideoList() {
         try {
-            const { data } = await axios.get(this.baseUrl + "/videos/");
+            const { data } = await axios.get(this.baseUrl + "videos/");
             return data;
         }
         catch(error) {
@@ -30,7 +30,7 @@ export default class VideoApi {
 
     async postNewVideo(newUploadVideo) {
         try {
-            const { data } = await axios.post(this.baseUrl + "/videos/", newUploadVideo);
+            const { data } = await axios.post(this.baseUrl + "videos/", newUploadVideo);
             return data;
         }
         catch(error) {
@@ -40,7 +40,7 @@ export default class VideoApi {
 
     async postComment(newComment) {
         try {
-            const { data } = await axios.post(this.baseUrl + "/videos/" + this.videoId + "/comments", newComment);
+            const { data } = await axios.post(this.baseUrl + "videos/" + this.videoId + "/comments", newComment);
             return data;
 
         }
@@ -51,7 +51,7 @@ export default class VideoApi {
 
     async deleteComment(commentId) {
         try {
-            const { data } = await axios.delete(this.baseUrl + "/videos/" + this.videoId + "/comments/" + commentId);
+            const { data } = await axios.delete(this.baseUrl + "videos/" + this.videoId + "/comments/" + commentId);
             return data;
         }
         catch(error) {
@@ -61,7 +61,7 @@ export default class VideoApi {
 
     async likeVideo() {
         try {
-            const { data } = await axios.put(this.baseUrl + "/videos/" + this.videoId + "/likes");
+            const { data } = await axios.put(this.baseUrl + "videos/" + this.videoId + "/likes");
             return data;
         }
         catch(error) {
