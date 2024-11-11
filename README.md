@@ -1,17 +1,40 @@
-# React + Vite
+## BrainFlix
+A SPA full-stack (single page application) for streaming videos, similar to YouTube. Includes features such as commenting, liking, file upload, validation, and dynamic routing.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+API instructions: <a href="https://unit-3-project-api-0a5620414506.herokuapp.com/" target="_blank">BrainFlix API</a>
+<br/>
+These API instructions were created by: <a href="https://brainstation.io/" targte="_blank">BrainStation</a>
 
-Currently, two official plugins are available:
+## How to run this project?
+- To run the project use: `$ npm run dev`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installed Packages
+- [npm axios](https://www.npmjs.com/package/axios)    
+    - Installation:
+    `$ npm install axios`
 
-To start this project first please install all required packages by using "npm install" command on the terminal
+- [npm dotenv](https://www.npmjs.com/package/dotenv)    
+    - Installation:
+    `$ npm install dotenv --save`
 
-After that use "npm run dev" to run the program locally.
+- [npm moment](https://www.npmjs.com/package/moment)    
+    - Installation:
+    `$ npm install moment`
 
-This project is being developed by using React, it will be divided into 3 different sprints. More details will be provided while developing this application. 
+- [npm react-router-dom](https://www.npmjs.com/package/react-router-dom)
+    - Installation:
+    `$ npm install react-router-dom`
 
-- Sprint 1: Extracts data from a local JSON file to display respective video details
-- Sprint 2: Extracts data from an API using Axios to display respective video details
+- [npm sass](https://www.npmjs.com/package/sass)    
+    - Installation:
+    `$ npm install sass`
+
+## Back-End Repository:
+Please access the following repository for the Back-End portion of this project: https://github.com/JuanDavidDV/JuanDavid-DazaVelosa-brainflix-api
+
+## Technologies used to develop this project:
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=react,vite,js,npm,nodejs,express,sass" />
+  </a>
+</p>
